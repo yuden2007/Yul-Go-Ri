@@ -1,0 +1,1038 @@
+ @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #174f43;
+  background: #f7f6f0;
+  font-family: "DM Sans", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.festival-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HERO CAROUSEL
+========================= */
+
+#festivalCarousel {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  background: #174f43;
+}
+
+#festivalCarousel .carousel-inner,
+#festivalCarousel .carousel-item {
+  height: 480px;
+}
+
+#festivalCarousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(55%);
+}
+
+.carousel-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 9%;
+  width: 75%;
+  max-width: 650px;
+  transform: translateY(-50%);
+  color: #ffffff;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  margin-bottom: 18px;
+  color: #e4c47b;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.carousel-hero-text h1 {
+  margin: 0 0 20px;
+  font-size: clamp(36px, 5vw, 65px);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.hero-description {
+  max-width: 520px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #f7f6f0;
+}
+
+#festivalCarousel .carousel-indicators {
+  z-index: 5;
+}
+
+#festivalCarousel .carousel-indicators button {
+  width: 28px;
+  height: 4px;
+  border: 0;
+  border-radius: 5px;
+}
+
+#festivalCarousel .carousel-control-prev,
+#festivalCarousel .carousel-control-next {
+  width: 7%;
+  z-index: 5;
+}
+
+/* =========================
+   FESTIVAL CARD CONTAINER
+========================= */
+
+.festival-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  padding: 40px 15px;
+}
+
+/* =========================
+   FESTIVAL CARDS - SMALLER
+========================= */
+
+.festival-card {
+  width: calc(33.333% - 22px);
+  min-width: 240px;
+  max-width: 340px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e8e4d8;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(23, 79, 67, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.festival-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 30px rgba(23, 79, 67, 0.15);
+}
+
+/* =========================
+   CARD IMAGES
+========================= */
+
+.festival-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #d9dfd4;
+}
+
+.festival-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.festival-card:hover .festival-image img {
+  transform: scale(1.06);
+}
+
+.image-date {
+  position: absolute;
+  left: 15px;
+  bottom: 12px;
+  margin: 0;
+  padding: 8px 12px;
+  color: #ffffff;
+  background: rgba(23, 79, 67, 0.92);
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.festival-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px 18px;
+}
+
+.location {
+  margin: 0 0 10px;
+  color: #a17e35;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.festival-info h2 {
+  margin: 0 0 12px;
+  color: #174f43;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.description {
+  margin: 0 0 20px;
+  color: #666b65;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================
+   BUTTON CONTAINER
+========================= */
+
+.button-container {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
+}
+/* =========================
+   BUTTONS - SAME ROW
+========================= */
+
+.event-book,
+.more-info {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  min-height: 40px;
+  padding: 10px 6px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.event-book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #174f43;
+  border: 1px solid #174f43;
+  text-decoration: none;
+}
+
+.event-book:hover {
+  color: #174f43;
+  background: #ffffff;
+}
+
+.more-info {
+  color: #174f43;
+  background: #ffffff;
+  border: 1px solid #c9a45c;
+}
+
+.more-info i {
+  margin-right: 4px;
+}
+
+.more-info:hover {
+  color: #ffffff;
+  background: #174f43;
+  border-color: #174f43;
+}
+
+/* =========================
+   MORE INFO POPUP
+========================= */
+
+.info-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(12, 35, 29, 0.75);
+  backdrop-filter: blur(5px);
+}
+
+.info-popup.show {
+  display: flex;
+}
+
+.info-box {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 35px;
+  color: #174f43;
+  background: #f7f6f0;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  animation: popupAppear 0.3s ease;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.info-box::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes popupAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#close-info {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: #174f43;
+  background: #ffffff;
+  border: 1px solid #e2dfd5;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+#close-info:hover {
+  color: #ffffff;
+  background: #174f43;
+}
+
+.popup-small-title {
+  margin: 0 40px 12px 0;
+  color: #a17e35;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+#info-title {
+  margin: 0 0 22px;
+  color: #174f43;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.popup-details {
+  margin-bottom: 25px;
+  padding: 15px;
+  background: #ffffff;
+  border-left: 3px solid #c9a45c;
+  border-radius: 5px;
+}
+
+.popup-details p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0;
+  color: #555e57;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.popup-details i {
+  margin-top: 4px;
+  color: #a17e35;
+}
+
+.popup-section {
+  margin: 22px 0;
+}
+
+.popup-section h3 {
+  margin: 0 0 10px;
+  color: #174f43;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.popup-section h3 i {
+  margin-right: 7px;
+  color: #a17e35;
+}
+
+.popup-section p,
+.popup-section li {
+  color: #626960;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.popup-section ul {
+  padding-left: 22px;
+}
+
+.popup-footer {
+  margin: 25px 0 0;
+  padding-top: 18px;
+  color: #a17e35;
+  border-top: 1px solid #ded9cc;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Hide page scrollbar */
+
+body {
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  #festivalCarousel,
+  #festivalCarousel .carousel-inner,
+  #festivalCarousel .carousel-item {
+    height: 420px;
+  }
+
+  .festival-container {
+    gap: 22px;
+    padding: 35px 8px;
+  }
+
+  .festival-card {
+    width: calc(50% - 15px);
+    min-width: 240px;
+    max-width: 340px;
+  }
+
+  .festival-info {
+    padding: 20px 16px;
+  }
+
+  .festival-info h2 {
+    font-size: 20px;
+  }
+
+  .carousel-hero-text {
+    left: 8%;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 576px) {
+  
+#festivalCarousel,
+  #festivalCarousel .carousel-inner,
+  #festivalCarousel .carousel-item {
+    height: 350px;
+  }
+
+  #festivalCarousel {
+    /* border-radius: 10px; */
+    width: 100%;
+  }
+
+  .carousel-hero-text {
+    left: 7%;
+    width: 84%;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 12px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .carousel-hero-text h1 {
+    margin-bottom: 12px;
+    font-size: 38px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .festival-container {
+    gap: 22px;
+    padding: 25px 8px;
+  }
+
+  .festival-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 340px;
+  }
+
+  .festival-image {
+    height: 200px;
+  }
+
+  .festival-info {
+    padding: 20px 18px;
+  }
+
+  .festival-info h2 {
+    font-size: 21px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .button-container {
+    gap: 8px;
+  }
+
+  .event-book,
+  .more-info {
+    font-size: 11px;
+    padding: 10px 5px;
+  }
+
+  .info-popup {
+    padding: 12px;
+  }
+
+  .info-box {
+    padding: 28px 20px;
+    max-height: 92vh;
+  }
+
+  #info-title {
+    font-size: 26px;
+  }
+
+  .popup-section h3 {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+  .carousel-hero-text h1 {
+    font-size: 32px;
+  }
+
+  .festival-info h2 {
+    font-size: 21px;
+  }
+
+  .image-date {
+    left: 10px;
+    bottom: 10px;
+    padding: 7px 9px;
+    font-size: 9px;
+  }
+
+  .info-box {
+    padding: 25px 15px;
+  }
+
+  .button-container {
+    gap: 6px;
+  }
+
+  .event-book,
+  .more-info {
+    font-size: 10px;
+    padding: 9px 4px;
+  }
+}
+
+/* Chatbot copied from the tour page */
+.chatbot-button {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1500;
+  width: 54px;
+  height: 54px;
+  padding: 2px;
+  overflow: hidden;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+  cursor: pointer;
+}
+
+.chatbot-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.chatbot-box {
+  position: fixed;
+  right: 22px;
+  bottom: 88px;
+  z-index: 1500;
+  display: none;
+  flex-direction: column;
+  width: 310px;
+  max-width: calc(100vw - 30px);
+  overflow: hidden;
+  border: 1px solid #e7e9df;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 5px 22px rgb(0 0 0 / 20%);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #102a2a;
+  color: #fff;
+}
+
+.chat-header img {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  margin-right: 9px;
+  border-radius: 50%;
+  background: #fff;
+  object-fit: contain;
+}
+
+.chat-header span {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.chat-header button {
+  padding: 0 5px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  height: 260px;
+  padding: 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.bot-message,
+.user-message {
+  max-width: 85%;
+  margin: 0;
+  padding: 9px 11px;
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background: #edf3ef;
+  color: #193b32;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: #193b32;
+  color: #fff;
+}
+
+.chat-input {
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.chat-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid #d6ddd8;
+  border-radius: 7px;
+  outline: none;
+  font-size: 11px;
+}
+
+.chat-input input:focus {
+  border-color: #193b32;
+}
+
+.chat-input button {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 7px;
+  background: #193b32;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .chatbot-button {
+    right: 14px;
+    bottom: 14px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .chatbot-box {
+    right: 10px;
+    bottom: 72px;
+    max-width: calc(100vw - 20px);
+  }
+}
+
+
+/* TABLET RESPONSIVE */
+@media (max-width: 992px) {
+
+  /* HERO CAROUSEL */
+  #festivalCarousel .carousel-item {
+    height: 380px;
+  }
+
+  .carousel-hero-text {
+    left: 6%;
+    right: 6%;
+    max-width: 550px;
+  }
+
+  .carousel-hero-text h1 {
+    font-size: 45px;
+  }
+
+  .carousel-hero-text .hero-description {
+    font-size: 16px;
+  }
+
+  /* FESTIVAL CARDS */
+  .festival-container {
+    max-width: 750px;
+    gap: 18px;
+  }
+
+  .festival-card {
+    width: 47%;
+  }
+
+  .festival-image img {
+    height: 180px;
+  }
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 576px) {
+
+  body {
+    padding: 5px;
+  }
+
+  /* HERO CAROUSEL */
+  #festivalCarousel {
+    margin-bottom: 15px;
+  }
+
+  #festivalCarousel .carousel-item {
+    height: 320px;
+  }
+
+  #festivalCarousel .carousel-item img {
+    object-position: center;
+  }
+
+  #festivalCarousel .carousel-item::after {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 35, 27, 0.8),
+      rgba(0, 35, 27, 0.3)
+    );
+  }
+
+  /* HERO TEXT */
+  .carousel-hero-text {
+    left: 20px;
+    right: 20px;
+    max-width: 100%;
+  }
+
+  .carousel-hero-text .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .carousel-hero-text h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .carousel-hero-text .hero-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  #festivalCarousel .carousel-control-prev,
+  #festivalCarousel .carousel-control-next {
+    width: 10%;
+  }
+
+  /* FESTIVAL CONTAINER */
+  .festival-container {
+    width: 100%;
+    padding: 15px 5px;
+    gap: 20px;
+  }
+
+  /* ONE CARD PER ROW */
+  .festival-card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .festival-image img {
+    height: 200px;
+  }
+
+  .image-date {
+    font-size: 12px;
+  }
+
+  /* FESTIVAL INFORMATION */
+  .festival-info {
+    padding: 18px;
+  }
+
+  .festival-info h2 {
+    font-size: 20px;
+  }
+
+  .location,
+  .festival-date {
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* BUTTONS */
+  .event-book,
+  .more-info {
+    padding: 9px 12px;
+    font-size: 12px;
+    margin: 5px 2px;
+  }
+
+  /* MORE INFO POPUP */
+  .info-popup {
+    padding: 12px;
+  }
+
+  .info-box {
+    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
+    padding: 25px 18px;
+    border-radius: 12px;
+  }
+
+  #close-info {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .popup-small-title {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    padding-right: 25px;
+  }
+
+  #info-title {
+    font-size: 23px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+
+  .popup-details {
+    padding: 12px;
+    margin-bottom: 18px;
+  }
+
+  .popup-details p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .popup-section {
+    margin-bottom: 18px;
+  }
+
+  .popup-section h3 {
+    font-size: 15px;
+  }
+
+  .popup-section p,
+  .popup-section li {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .popup-section ul {
+    padding-left: 18px;
+  }
+
+  .popup-footer {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+}
+
+
+/* EXTRA SMALL MOBILE */
+@media (max-width: 360px) {
+
+  #festivalCarousel .carousel-item {
+    height: 280px;
+  }
+
+  .carousel-hero-text h1 {
+    font-size: 27px;
+  }
+
+  .carousel-hero-text .hero-description {
+    font-size: 12px;
+  }
+
+  .festival-info h2 {
+    font-size: 18px;
+  }
+
+  .festival-image img {
+    height: 160px;
+  }
+
+  .event-book,
+  .more-info {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .info-box {
+    padding: 22px 15px;
+  }
+
+  #info-title {
+    font-size: 21px;
+  }
+}
+
+/* Homepage-matched hero height. */
+#festivalCarousel .carousel-item {
+  height: 65vh;
+  min-height: 500px;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #festivalCarousel .carousel-item {
+    height: 60vh;
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #festivalCarousel .carousel-item {
+    height: 62svh;
+    min-height: 440px;
+  }
+}
+
+
+/* Keep event hero typography aligned at every screen size. */
+.carousel-hero-text .hero-eyebrow { color: #e5b69f !important; font-size: 11px !important; }
+.carousel-hero-text h1 { color: #fff !important; font-size: clamp(38px, 5.5vw, 68px) !important; }
+.carousel-hero-text .hero-description { color: rgb(255 255 255 / 83%) !important; font-size: clamp(15px, 1.5vw, 17px) !important; }
+.carousel-hero-text .event-hero-accent { color: #e6a087 !important; }

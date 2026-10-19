@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" class="hide-scrollbars">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+     <!-- <script>
+    tailwind.config = {
+        corePlugins: {
+            preflight: false
+        }
+    };
+</script> -->
+<script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rozha+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+<link rel="stylesheet" href="./css/footer.css">
+<link rel="stylesheet" href="./css/plan.css">
+<link rel="shortcut icon" href="./assest/Gemini_Generated_Image_bl9c4bbl9c4bbl9c-removebg-preview.png" type="image/x-icon">
+
+
+    <title>Yul-Go-Ri Plan </title>
+</head>
+<body>
+
+    
+<!-- HEADER START -->
+<header class="site-header">
+
+    <nav class="navbar navbar-expand-lg navbar-dark"
+         aria-label="Main navigation">
+
+        <div class="container">
+
+            <!-- Yul Go Ri Logo -->
+            <a class="navbar-brand" href="index.html#home">
+                <img src="./assest/Gemini_Generated_Image_bl9c4bbl9c4bbl9c-removebg-preview.png"
+                     alt="Yul Go Ri Logo"
+                     class="site-logo">
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation"
+                    aria-controls="mainNavigation"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse"
+                 id="mainNavigation">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <!-- Service Dropdown -->
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link"
+                           href="service.html"
+                           >
+                            Service
+                        </a>
+
+                        <button class="nav-link dropdown-toggle service-menu-toggle"
+                                type="button"
+                                id="serviceDropdown"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                aria-label="Open service menu"></button>
+
+                        <ul class="dropdown-menu"
+                            aria-labelledby="serviceDropdown">
+
+                            <li>
+                                <a class="dropdown-item"
+                                   href="event.html">
+                                    Events
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item"
+                                   href="tour.html">
+                                    Tours
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item"
+                                   href="stay.html">
+                                    Stay
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Separate Plan Your Trip Button -->
+                <a href="plan.html"
+                   class="trip-button header-trip-button">
+                    Plan Your Trip <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- HEADER END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Hero Section -->
+    <section class="relative bg-cover bg-center py-20 md:py-28 px-4 text-white overflow-hidden tshewangdechen-no-print tshewangdechen-hero-section" 
+             style="background-image: url('./assest/image/plan%20img/dechen%20img.jpg');">
+        
+        
+        <!-- Decorative Dharmachakra Background Pattern -->
+        <div class="absolute right-[-40px] top-[-40px] opacity-10 pointer-events-none text-[bg-black] tshewangdechen-hero-bg-icon">
+            <i class="fa-solid fa-dharmachakra text-[320px]"></i>
+        </div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10 tshewangdechen-hero-content">
+
+
+            <h1 class="tshewangdechen-font-serif text-4xl sm:text-6xl font-bold text-white mb-6 leading-tight tshewangdechen-hero-title">
+                Plan Your Trip with <span class="text-[#D4AF37] underline decoration-[#E6A100]">Yul Go Ri</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-gray-100 max-w-3xl mx-auto mb-8 leading-relaxed font-normal tshewangdechen-hero-desc">
+                Explore the sacred valleys, ancient dzongs, and pristine mountain landscapes of Bhutan. Compute your entire domestic itinerary seamlessly in <strong class="text-[#D4AF37] font-bold">Bhutanese Ngultrum (Nu.)</strong> including private transport, homestays, hot stone baths, and local guides.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Interactive Budget Calculator Section -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow tshewangdechen-main-content" id="tshewangdechen-calculator">
+
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start tshewangdechen-calculator-grid">
+            
+            <!-- Left Controls Column (7 Columns) -->
+            <div class="lg:col-span-7 space-y-6 tshewangdechen-no-print tshewangdechen-controls-container">
+
+
+
+                <!-- 1. Trip Duration Selector -->
+                <div class="bg-[white] border border-[black] rounded-2xl p-6 shadow-sm hover:shadow-md transition tshewangdechen-card">
+                    <div class="flex items-center justify-between mb-4">
+                        <label class="font-bold text-[black] text-sm flex items-center gap-2">
+                            <span class="w-7 h-7 bg-[black] text-white rounded-full flex items-center justify-center text-xs">1</span>
+                            Trip Duration Multiplier
+                        </label>
+                        <span class="text-[11px] font-semibold text-green">Number of Travel Days</span>
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-2 sm:gap-3 tshewangdechen-duration-grid">
+                        <button type="button" onclick="setTripDays(3)" id="tshewangdechen-btn-3days" class="tshewangdechen-duration-btn py-3 px-2 rounded-xl border-2 font-bold text-xs sm:text-sm text-center transition flex flex-col items-center justify-center gap-0.5">
+                            <span>3 Days</span>
+                            <span class="text-[10px] font-normal text-green">2 Nights</span>
+                        </button>
+                        <button type="button" onclick="setTripDays(5)" id="tshewangdechen-btn-5days" class="tshewangdechen-duration-btn py-3 px-2 rounded-xl border-2 font-bold text-xs sm:text-sm text-center transition flex flex-col items-center justify-center gap-0.5">
+                            <span>5 Days</span>
+                            <span class="text-[10px] font-normal text-gray-500">4 Nights</span>
+                        </button>
+                        <button type="button" onclick="setTripDays(7)" id="tshewangdechen-btn-7days" class="tshewangdechen-duration-btn py-3 px-2 rounded-xl border-2 font-bold text-xs sm:text-sm text-center transition flex flex-col items-center justify-center gap-0.5">
+                            <span>7 Days</span>
+                            <span class="text-[10px] font-normal text-gray-500">6 Nights</span>
+                        </button>
+                        <button type="button" onclick="enableCustomTripDays()" id="tshewangdechen-btn-custom" class="tshewangdechen-duration-btn py-3 px-2 rounded-xl border-2 font-bold text-xs sm:text-sm text-center transition flex flex-col items-center justify-center gap-0.5">
+                            <span>Custom</span>
+                            <span class="text-[10px] font-normal text-gray-500">Set Custom</span>
+                        </button>
+                    </div>
+
+                    <div id="tshewangdechen-custom-days-box" class="mt-4 hidden pt-3 border-t border-[#E8DFD1]">
+                        <div class="flex items-center gap-3">
+                            <span class="text-xs font-semibold text-gray-700">Custom Duration Days:</span>
+                            <input type="number" id="tshewangdechen-input-custom-days" value="4" min="1" max="30" oninput="calculateBudget()" class="w-24 bg-white border border-[#E8DFD1] rounded-lg px-3 py-1.5 font-bold text-sm text-center focus:ring-2 focus:ring-[#D4AF37] outline-none">
+                            <span class="text-xs text-gray-500 font-medium">Days (Applied to daily rates)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Traveler Count -->
+                <div class="bg-[white] border border-[black] rounded-2xl p-6 shadow-sm hover:shadow-md transition tshewangdechen-card">
+                    <div class="flex items-center justify-between mb-4">
+                        <label class="font-bold text-[black] text-sm flex items-center gap-2">
+                            <span class="w-7 h-7 bg-[black] text-white rounded-full flex items-center justify-center text-xs">2</span>
+                            Traveler Headcount Multiplier
+                        </label>
+                        <span class="text-xs text-gray-500">Multiplies per-person items</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white p-3.5 rounded-xl border border-[black] flex items-center justify-between">
+                            <div>
+                                <span class="font-bold text-xs block text-[black]">Adults</span>
+                                <span class="text-[10px] text-gray-500">Age 12+ years</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button type="button" onclick="adjustTravelerCount('adults', -1)" class="w-8 h-8 bg-[#ffff] hover:bg-[#ffff] rounded-lg font-bold text-sm flex items-center justify-center">-</button>
+                                <input type="number" id="tshewangdechen-input-adults" value="2" min="1" max="25" readonly class="w-10 text-center font-bold text-sm bg-transparent">
+                                <button type="button" onclick="adjustTravelerCount('adults', 1)" class="w-8 h-8 bg-[#ffff] hover:bg-[#ffff] rounded-lg font-bold text-sm flex items-center justify-center">+</button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-3.5 rounded-xl border border-[black] flex items-center justify-between">
+                            <div>
+                                <span class="font-bold text-xs block text-[black]">Children</span>
+                                <span class="text-[10px] text-gray-500">Age 5-11 (50% Food rate)</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button type="button" onclick="adjustTravelerCount('children', -1)" class="w-8 h-8 bg-[#ffff] hover:bg-[white] rounded-lg font-bold text-sm flex items-center justify-center">-</button>
+                                <input type="number" id="tshewangdechen-input-children" value="0" min="0" max="15" readonly class="w-10 text-center font-bold text-sm bg-transparent">
+                                <button type="button" onclick="adjustTravelerCount('children', 1)" class="w-8 h-8 bg-[#ffff] hover:bg-[white] rounded-lg font-bold text-sm flex items-center justify-center">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- 3. Transportation Cost Slider & Options -->
+
+                <div class="bg-[white] border border-[black] rounded-2xl p-6 shadow-sm hover:shadow-md transition tshewangdechen-card">
+                    <div class="flex items-center justify-between mb-2">
+                        <label class="font-bold text-[black] text-sm flex items-center gap-2">
+                            <span class="w-7 h-7 bg-[black] text-white rounded-full flex items-center justify-center text-xs">3</span>
+                            Transportation Cost (Per Vehicle / Day)
+                        </label>
+                        <span class="font-extrabold text-sm text-[black] bg-white px-3 py-1 border border-[black] rounded-lg" id="tshewangdechen-trans-val">
+                            Nu. 0 / day
+                        </span>
+                    </div>
+
+
+
+                    <div class="space-y-2">
+                        <label class="flex items-center justify-between p-3 bg-white border border-[black] rounded-xl cursor-pointer hover:border-[black] transition">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="tshewangdechen-trans-radio" value="800" onchange="syncTransRadio(800)" class="accent-[black] w-4 h-4">
+                                <span class="font-bold text-xs text-[black]">Shared Coaster Bus Ticket (Inter-dzongkhag)</span>
+                            </div>
+                            <span class="text-xs font-bold text-[black]">Nu. 800</span>
+                        </label>
+
+                        <label class="flex items-center justify-between p-3 bg-white border border-[black] rounded-xl cursor-pointer hover:border-[black] transition">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="tshewangdechen-trans-radio" value="3500" onchange="syncTransRadio(3500)" class="accent-[black] w-4 h-4">
+                                <span class="font-bold text-xs text-[black]">Private Sedan Taxi (4-seater reserved with driver)</span>
+                            </div>
+                            <span class="text-xs font-bold text-[black]">Nu. 3,500</span>
+                        </label>
+
+                        <label class="flex items-center justify-between p-3 bg-white border border-[black] rounded-xl cursor-pointer hover:border-[black] transition">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="tshewangdechen-trans-radio" value="5500" onchange="syncTransRadio(5500)" class="accent-[black] w-4 h-4">
+                                <span class="font-bold text-xs text-[black]">Private SUV / Prado / Hilux Hire (4x4)</span>
+                            </div>
+                            <span class="text-xs font-bold text-[black]">Nu. 5,500</span>
+                        </label>
+
+                        <label class="flex items-center justify-between p-3 bg-white border border-[black] rounded-xl cursor-pointer hover:border-[black] transition">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="tshewangdechen-trans-radio" value="7500" onchange="syncTransRadio(7500)" class="accent-[black] w-4 h-4">
+                                <span class="font-bold text-xs text-[black]">Toyota Coaster Bus (For large family groups 8-15)</span>
+                            </div>
+                            <span class="text-xs font-bold text-[black]">Nu. 7,500</span>
+                        </label>
+                    </div>
+                </div>
+
+
+
+                
+                <!-- 4. Lodging / Hotel Cost Slider & Options -->
+                <div id="tshewangdechen-lodging-card" class="bg-[white] border border-[black] rounded-2xl p-6 shadow-sm hover:shadow-md transition tshewangdechen-card">
+                    <div class="flex items-center justify-between mb-2">
+                        <label class="font-bold text-[black] text-sm flex items-center gap-2">
+                            <span class="w-7 h-7 bg-[black] text-white rounded-full flex items-center justify-center text-xs">4</span>
+                            Lodging / Hotel Cost (Per Room / Night)
+                        </label>
+                        <span class="font-extrabold text-sm text-[black] bg-white px-3 py-1 border border-[black] rounded-lg" id="tshewangdechen-lodge-val">
+                            Nu. 0 / night
+                        </span>
+                    </div>
+
+
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <button type="button" onclick="syncLodgePreset(1200)" class="bg-white border border-[black] p-3 rounded-xl text-center hover:border-[#D4AF37] transition flex flex-col justify-between">
+                            <span class="font-bold text-xs text-[black] block">Village Homestay</span>
+                            <span class="text-[10px] text-gray-500 block mt-1">Authentic farm stay</span>
+                            <span class="text-xs font-extrabold text-[white] bg-[gray] px-2 py-1 rounded mt-2 block">Nu. 1,200</span>
+                        </button>
+
+                        <button type="button" onclick="syncLodgePreset(2500)" class="bg-white border border-[black] p-3 rounded-xl text-center hover:border-[black] transition flex flex-col justify-between">
+                            <span class="font-bold text-xs text-[black] block">3-Star Local Hotel</span>
+                            <span class="text-[10px] text-gray-500 block mt-1">Standard cozy room</span>
+                            <span class="text-xs font-extrabold text-[white] bg-[gray] px-2 py-1 rounded mt-2 block">Nu. 2,500</span>
+                        </button>
+
+                        <button type="button" onclick="syncLodgePreset(6500)" class="bg-white border border-[black] p-3 rounded-xl text-center hover:border-[black] transition flex flex-col justify-between">
+                            <span class="font-bold text-xs text-[black] block">Luxury Resort</span>
+                            <span class="text-[10px] text-gray-500 block mt-1">Premium hospitality</span>
+                            <span class="text-xs font-extrabold text-[white] bg-[gray] px-2 py-1 rounded mt-2 block">Nu. 6,500</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. Fooding & Dining Cost -->
+                <div class="bg-[white] border border-[black] rounded-2xl p-6 shadow-sm hover:shadow-md transition tshewangdechen-card">
+                    <label class="font-bold text-[black] text-sm flex items-center gap-2 mb-3">
+                        <span class="w-7 h-7 bg-[black] text-white rounded-full flex items-center justify-center text-xs">5</span>
+                        Fooding / Dining Cost (Per Adult / Day)
+                    </label>
+
+                    <select id="tshewangdechen-select-food" onchange="calculateBudget()" class="w-full bg-white border border-[black] rounded-xl p-3 font-semibold text-xs text-[black] focus:ring-2 focus:ring-[black] outline-none">
+                        <option value="" selected disabled>Select a dining option</option>
+                        <option value="400">Budget Eateries (Traditional Ema Datshi, Kewa Datshi & Red Rice) - Nu. 400 / day</option>
+                        <option value="800">Standard Restaurant Dining (Multi-course local buffet / A-la-carte) - Nu. 800 / day</option>
+                        <option value="1600">Premium Hotel & Bakery Cafe Dining - Nu. 1,600 / day</option>
+                    </select>
+                </div>
+
+                <!-- 6. Local Guide Cost & Personal Allowance Sliders -->
+                <div class="bg-[white] border border-[black] rounded-2xl p-6 shadow-sm hover:shadow-md transition space-y-4 tshewangdechen-card">
+                    <div>
+                        <label class="font-bold text-[black] text-sm flex items-center gap-2 mb-3">
+                            <span class="w-7 h-7 bg-[black] text-white rounded-full flex items-center justify-center text-xs">6</span>
+                            Local Cultural Guide / Trek Lead Option
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <label class="bg-white border border-[black] p-2.5 rounded-lg flex items-center gap-2 cursor-pointer text-xs">
+                                <input type="radio" name="tshewangdechen-guide-radio" value="0" checked onchange="calculateBudget()" class="accent-[black]">
+                                <div>
+                                    <span class="font-bold block">No Guide</span>
+                                    <span class="text-[10px] text-gray-500">Self-guided</span>
+                                </div>
+                            </label>
+                            <label class="bg-white border border-[black] p-2.5 rounded-lg flex items-center gap-2 cursor-pointer text-xs">
+                                <input type="radio" name="tshewangdechen-guide-radio" value="1500" onchange="calculateBudget()" class="accent-[black]">
+                                <div>
+                                    <span class="font-bold block">Cultural Guide</span>
+                                    <span class="text-[10px] text-gray-500">Nu. 1,500 / day</span>
+                                </div>
+                            </label>
+                            <label class="bg-white border border-[black] p-2.5 rounded-lg flex items-center gap-2 cursor-pointer text-xs">
+                                <input type="radio" name="tshewangdechen-guide-radio" value="2500" onchange="calculateBudget()" class="accent-[black]">
+                                <div>
+                                    <span class="font-bold block">Trek Specialist</span>
+                                    <span class="text-[10px] text-gray-500">Nu. 2,500 / day</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Special Local Experience Add-ons -->
+                <div class="bg-[white] border border-[black] rounded-2xl p-6 shadow-sm hover:shadow-md transition tshewangdechen-card" id="tshewangdechen-experiences">
+                    <label class="font-bold text-[black] text-sm flex items-center gap-2 mb-4">
+                        <span class="w-7 h-7 bg-[black] text-white rounded-full flex items-center justify-center text-xs">7</span>
+                        Special Local Experience Add-ons (Optional)
+                    </label>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <label class="bg-white border border-[black] p-3 rounded-xl flex items-center justify-between cursor-pointer hover:border-[black] transition">
+                            <div class="flex items-center gap-2.5">
+                                <input type="checkbox" id="tshewangdechen-addon-spa" onchange="calculateBudget()" class="accent-[black] w-4 h-4 rounded">
+                                <div>
+                                    <span class="font-bold text-xs block text-[black]">Hot Stone Bath (Dotsho)</span>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-[black]">+ Nu. 1,500 </span>
+                        </label>
+
+                        <label class="bg-white border border-[black] p-3 rounded-xl flex items-center justify-between cursor-pointer hover:border-[black] transition">
+                            <div class="flex items-center gap-2.5">
+                                <input type="checkbox" id="tshewangdechen-addon-cycling" onchange="calculateBudget()" class="accent-[black] w-4 h-4 rounded">
+                                <div>
+                                    <span class="font-bold text-xs block text-[black]">Mountain Biking Rental</span>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-[black]">+ Nu. 1,200 </span>
+                        </label>
+
+                        <label class="bg-white border border-[black] p-3 rounded-xl flex items-center justify-between cursor-pointer hover:border-[black] transition">
+                            <div class="flex items-center gap-2.5">
+                                <input type="checkbox" id="tshewangdechen-addon-archery" onchange="calculateBudget()" class="accent-[black] w-4 h-4 rounded">
+                                <div>
+                                    <span class="font-bold text-xs block text-[black]">Spa</span>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-[black]">+ Nu. 1200 </span>
+                        </label>
+
+                        <label class="bg-white border border-[black] p-3 rounded-xl flex items-center justify-between cursor-pointer hover:border-[black] transition">
+                            <div class="flex items-center gap-2.5">
+                                <input type="checkbox" id="tshewangdechen-addon-camping" onchange="calculateBudget()" class="accent-[black] w-4 h-4 rounded">
+                                 <div>
+                                    <span class="font-bold text-xs block text-[black]">Camping & Bonfire Gear</span>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-[black]">+ Nu. 2,000 </span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Summary Column (5 Columns) -->
+            <div class="lg:col-span-5 sticky top-24 tshewangdechen-summary-container">
+                
+                <div class="bg-[white] border-2 border-[] rounded-2xl shadow-xl p-6 relative overflow-hidden tshewangdechen-print-card" id="tshewangdechen-receipt-card">
+                    
+                    <!-- Decorative Top Corner Accent -->
+
+                    <div class="border-b-2 border-[black] pb-4 mb-4">
+                        <span class="text-[10px] font-extrabold uppercase tracking-widest text-[black] bg-[white] px-2.5 py-1 rounded">
+                            YUL GO RI RECEIPT
+                        </span>
+                        <h3 class="tshewangdechen-font-serif text-2xl font-bold text-[black] mt-2">Estimated Trip Budget</h3>
+                    </div>
+
+                    <!-- Metadata -->
+                    <div class="grid grid-cols-2 gap-3 mb-4 text-xs font-semibold">
+                        <div class="bg-[white] p-2.5 rounded-xl border border-[black]">
+                            <span class="text-[10px] text-gray-500 uppercase block">Trip Multiplier</span>
+                            <span class="text-[black] font-bold" id="tshewangdechen-receipt-duration-text">3 Days / 2 Nights</span>
+                        </div>
+                        <div class="bg-[white] p-2.5 rounded-xl border border-[black]">
+                            <span class="text-[10px] text-gray-500 uppercase block">Travel Group</span>
+                            <span class="text-[black] font-bold" id="tshewangdechen-receipt-travelers-text">2 Adults, 0 Children</span>
+                        </div>
+                    </div>
+
+                    <!-- Itemized Breakdown -->
+                    <div class="space-y-3 text-xs border-b border-[black] pb-4 mb-4">
+                        <div class="flex justify-between items-center font-medium">
+                            <span class="text-gray-600"><i class="fa-solid fa-car w-4 text-[black]"></i> Transport Subtotal:</span>
+                            <span class="font-bold text-[black]" id="tshewangdechen-cost-trans">Nu. 0</span>
+                        </div>
+
+                        <div class="flex justify-between items-center font-medium">
+                            <span class="text-gray-600"><i class="fa-solid fa-hotel w-4 text-[black]"></i> Lodging Subtotal:</span>
+                            <span class="font-bold text-[black]" id="tshewangdechen-cost-lodge">Nu. 0</span>
+                        </div>
+
+                        <div class="flex justify-between items-center font-medium">
+                            <span class="text-gray-600"><i class="fa-solid fa-utensils w-4 text-[black]"></i> Fooding Subtotal:</span>
+                            <span class="font-bold text-[black]" id="tshewangdechen-cost-food">Nu. 0</span>
+                        </div>
+
+                        <div class="flex justify-between items-center font-medium">
+                            <span class="text-gray-600"><i class="fa-solid fa-compass w-4 text-[black]"></i> Guide & Personal Allowance:</span>
+                            <span class="font-bold text-[black]" id="tshewangdechen-cost-guide-misc">Nu. 0</span>
+                        </div>
+
+                        <div class="flex justify-between items-center font-medium">
+                            <span class="text-gray-600"><i class="fa-solid fa-spa w-4 text-[black]"></i> Add-on Experiences:</span>
+                            <span class="font-bold text-[black]" id="tshewangdechen-cost-addons">Nu. 0</span>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Grand Total Box -->
+                    <div class="bg-[white] text-white p-4 rounded-xl shadow-md text-center mb-6 tshewangdechen-total-banner">
+                        <span class="text-[10px] uppercase tracking-widest text-[black] font-bold block mb-1">Grand Total In Ngultrum</span>
+                        <div class="tshewangdechen-font-serif text-3xl sm:text-4xl font-bold text-black tracking-tight" id="tshewangdechen-val-grand-total">
+                            Nu. 0
+                        </div>
+                        <div class="text-xs text-[black] font-semibold mt-2 pt-2 border-t border-white/20 flex justify-between">
+                            <span>Cost Per Traveler:</span>
+                            <span id="tshewangdechen-val-per-person">Nu. 0</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="space-y-2.5 tshewangdechen-no-print">
+                        
+                        <button onclick="openBookingInquiryModal()" class="w-full bg-[black] hover:bg-[gray] text-white font-extrabold py-3 rounded-xl text-xs uppercase tracking-wider shadow transition flex items-center justify-center gap-2 tshewangdechen-btn-inquiry">
+                            <i class="fa-solid fa-paper-plane"></i> Send 
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Booking / Reservation Inquiry Modal -->
+    <div id="tshewangdechen-booking-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[2000] flex items-center justify-center overflow-y-auto p-4 hidden tshewangdechen-no-print">
+        <div class="bg-white border-2 border-[black] rounded-2xl max-w-md max-h-[calc(98vh-2rem)] overflow-y-auto w-full p-6 shadow-2xl relative">
+            <button onclick="closeBookingInquiryModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-[] text-[black] rounded-full flex items-center justify-center text-xl mx-auto mb-2 border border-[black]">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <h3 class="tshewangdechen-font-serif text-2xl font-bold text-[black]">Send Booking Inquiry</h3>
+                <p class="text-xs text-gray-500">Submit your estimated Ngultrum itinerary to reserve local transport and lodging.</p>
+            </div>
+
+            <form onsubmit="handleInquirySubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-[black] mb-1">Full Name (As per CID)</label>
+                    <input type="text" id="tshewangdechen-modal-name" required placeholder="e.g. Tshering Dorji" class="w-full bg-[] border border-[black] rounded-xl p-2.5 text-xs font-semibold focus:ring-2 focus:ring-[] outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-[black] mb-1">Mobile / Phone Number</label>
+                    <input type="tel" id="tshewangdechen-modal-phone" required placeholder="Phone Number" class="w-full bg-[] border border-[#ffff] rounded-xl p-2.5 text-xs font-semibold focus:ring-2 focus:ring-[#D4AF37] outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-[black] mb-1">Target Travel Month / Notes</label>
+                    <input type="text" id="tshewangdechen-modal-notes" placeholder="e.g. Paro Tshechu season travel" class="w-full bg-[] border border-[black] rounded-xl p-2.5 text-xs font-semibold focus:ring-2 focus:ring-[black] outline-none">
+                </div>
+
+                <div class="bg-[] p-3 rounded-xl border border-[#E8DFD1] text-center text-xs">
+                    <span class="text-gray-500 block">Calculated Total Request:</span>
+                    <span class="tshewangdechen-font-serif text-lg font-bold text-[black]" id="tshewangdechen-modal-total-display">Nu. 0</span>
+                </div>
+
+                <button type="submit" class="w-full bg-[] hover:bg-[] text-black font-extrabold py-3 rounded-xl text-xs uppercase tracking-wider shadow transition">
+                    Confirm & Send Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER START -->
+<!-- CHATBOT BUTTON -->
+<button class="chatbot-button" type="button" onclick="openChat()">
+    <img src="./assest/image/tour.img/final_logo-removebg-preview.png" alt="Yul-Go-Ri logo">
+</button>
+
+<!-- CHATBOT BOX -->
+<div class="chatbot-box" id="chatbot">
+    <div class="chat-header">
+        <img src="./assest/image/tour.img/final_logo-removebg-preview.png" alt="Yul-Go-Ri logo">
+        <span>Yul-Go-Ri Assistant</span>
+        <button class="chat-close" type="button" onclick="closeChat()" aria-label="Close chat">&times;</button>
+    </div>
+
+    <div class="chat-messages" id="messages">
+        <div class="bot-message">
+            Hi! 👋 Welcome to Yul-Go-Ri. Ask me about the sacred places of Bhutan.
+        </div>
+    </div>
+
+    <form class="chat-input" id="chatForm">
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<footer class="site-footer text-light" id="contact">
+
+    <div class="container py-5">
+
+        <div class="row g-4">
+
+            <!-- Company links -->
+            <section class="col-12 col-sm-6 col-lg-3 footercard">
+                <h2>Yul Go Ri!</h2>
+
+                <ul class="list-unstyled footer-links">
+                    <li><a href="about.html#about">About Us</a></li>
+                    <li><a href="contact.html#contact-content">Contact Us</a></li>
+                    <li><a href="service.html#services">Our Services</a></li>
+                    <li><a href="service.html#services">Travel Guides</a></li>
+                    <li><a href="contact.html#contact-content">Privacy Policy</a></li>
+                    <li><a href="contact.html#contact-content">Terms and Conditions</a></li>
+                </ul>
+            </section>
+
+            <!-- Destinations -->
+            <section class="col-12 col-sm-6 col-lg-3 footercard">
+                <h2>Explore Bhutan</h2>
+
+                <ul class="list-unstyled footer-links">
+                    <li><a href="index.html#home">Thimphu</a></li>
+                    <li><a href="index.html#home">Paro</a></li>
+                    <li><a href="index.html#home">Punakha</a></li>
+                    <li><a href="index.html#home">Phobjikha</a></li>
+                    <li><a href="index.html#home">Bumthang</a></li>
+                    <li><a href="index.html#home">Haa Valley</a></li>
+                </ul>
+            </section>
+
+            <!-- Activities -->
+            <section class="col-12 col-sm-6 col-lg-3 footercard">
+                <h2>Activities</h2>
+
+                <ul class="list-unstyled footer-links">
+                    <li><a href="tour.html#tours">Cultural Tours</a></li>
+                    <li><a href="tour.html#tours">Adventure Sports</a></li>
+                    <li><a href="tour.html#tours">Trekking</a></li>
+                    <li><a href="event.html#events">Festivals</a></li>
+                    <li><a href="tour.html#tours">Local Experiences</a></li>
+                    <li><a href="tour.html#tours">Nature &amp; Wildlife</a></li>
+                </ul>
+            </section>
+
+            <!-- Services -->
+            <section class="col-12 col-sm-6 col-lg-3 footercard">
+                <h2>Services</h2>
+
+                <ul class="list-unstyled footer-links">
+                    <li><a href="tour.html#tours">Tour Packages</a></li>
+                    <li><a href="stay.html#stay">Hotels &amp; Lodges</a></li>
+                    <li><a href="service.html#services">Transportation</a></li>
+                    <li><a href="service.html#services">Travel Guides</a></li>
+                    <li><a href="plan.html">Trip Planning</a></li>
+                    <li><a href="tour.html#tours">Custom Tours</a></li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom mt-4 pt-3 text-center">
+            <p class="mb-0">
+                &copy; 2026 Yul Go Ri! All rights reserved.
+            </p>
+        </div>
+
+    </div>
+</footer>
+<!-- FOOTER END -->
+
+
+<script src="./js/plan.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

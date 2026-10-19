@@ -1,0 +1,445 @@
+
+/* ---------- ROOT VARIABLES ---------- */
+:root {
+    --tshewangdechen-maroon: #7A1C1C;
+    --tshewangdechen-gold: #D4AF37;
+    --tshewangdechen-cream: #F7F2E8;
+}
+
+/* Match the shared navigation typography used on Home and Contact. */
+body,
+.site-header,
+.site-footer,
+.site-footer h2 {
+    font-family: "DM Sans", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* changing */
+.tshewangdechen-duration-btn{
+    transition: all 0.3s ease-in-out;
+    background-color:rgb(254, 251, 249);
+}
+
+.tshewangdechen-duration-btn:hover {
+    background-color: rgb(178, 240, 178);
+    transform: scale(1.05);
+}
+
+.bg-white{
+    background-color: var(--tshewangdechen-cream) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.bg-white:hover{
+    /* background-color: var(--tshewangdechen-gold) !important; */
+    color: black;
+    transform: scale(1.05);
+}
+/* ---------- FONT ---------- */
+.tshewangdechen-font-serif {
+    font-family: 'Rozha One', serif;
+}
+.fixed{
+    z-index: 1500;
+    margin: 0.5rem;
+}
+.bg-white{
+    margin: 0.5rem;
+}
+
+/* ---------- BHUTANESE PATTERN ---------- */
+.tshewangdechen-bhutan-pattern {
+    background-image:
+        radial-gradient(
+            var(--tshewangdechen-maroon) 0.5px,
+            transparent 0.5px
+        ),
+        radial-gradient(
+            var(--tshewangdechen-gold) 0.5px,
+            var(--tshewangdechen-cream) 0.5px
+        );
+
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+    opacity: 0.95;
+}
+
+/* ---------- HERO OVERLAY ---------- */
+.tshewangdechen-hero-overlay {
+    background: linear-gradient(
+        180deg,
+        rgba(82, 17, 17, 0.75) 0%,
+        rgba(122, 28, 28, 0.90) 100%
+    );
+}
+
+/* ---------- SCROLLBAR ---------- */
+.tshewangdechen-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--tshewangdechen-gold)
+                     var(--tshewangdechen-cream);
+}
+
+.tshewangdechen-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tshewangdechen-scrollbar::-webkit-scrollbar-track {
+    background: var(--tshewangdechen-cream);
+}
+
+.tshewangdechen-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--tshewangdechen-gold);
+    border-radius: 4px;
+}
+
+.tshewangdechen-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--tshewangdechen-maroon);
+}
+
+/* ---------- RANGE SLIDER ---------- */
+.tshewangdechen-range-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #E2D9CC;
+    outline: none;
+    cursor: pointer;
+}
+
+.tshewangdechen-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--tshewangdechen-maroon);
+    border: 2px solid var(--tshewangdechen-gold);
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+}
+
+.tshewangdechen-range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.tshewangdechen-range-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--tshewangdechen-maroon);
+    border: 2px solid var(--tshewangdechen-gold);
+    cursor: pointer;
+}
+
+/* ---------- PRINT FORMATTING ---------- */
+@media print {
+    .tshewangdechen-no-print {
+        display: none !important;
+    }
+
+    .tshewangdechen-print-card {
+        border: 2px solid #7A1C1C !important;
+        box-shadow: none !important;
+        width: 100% !important;
+    }
+
+    body.tshewangdechen-body {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+
+/* Fix Tailwind and Bootstrap navbar conflict */
+.site-header .navbar-collapse {
+    visibility: visible !important;
+}
+
+/* Keep navigation links visible */
+.site-header .navbar-nav,
+.site-header .nav-item,
+.site-header .nav-link {
+    visibility: visible !important;
+}
+
+/* Keep the shared header and footer containers at Bootstrap widths.
+   Tailwind's CDN container utility otherwise changes their widths on this page. */
+.site-header .container,
+.site-footer > .container {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 576px) {
+    .site-header .container,
+    .site-footer > .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .site-header .container,
+    .site-footer > .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .site-header .container,
+    .site-footer > .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .site-header .container,
+    .site-footer > .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .site-header .container,
+    .site-footer > .container {
+        max-width: 1320px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Chatbot copied from the tour page */
+.chatbot-button {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 1500;
+    width: 54px;
+    height: 54px;
+    padding: 2px;
+    overflow: hidden;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+    cursor: pointer;
+}
+
+.chatbot-button img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.chatbot-box {
+    position: fixed;
+    right: 22px;
+    bottom: 88px;
+    z-index: 1500;
+    display: none;
+    flex-direction: column;
+    width: 310px;
+    max-width: calc(100vw - 30px);
+    overflow: hidden;
+    border: 1px solid #e7e9df;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 5px 22px rgb(0 0 0 / 20%);
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #102a2a;
+    color: #fff;
+}
+
+.chat-header img {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    margin-right: 9px;
+    border-radius: 50%;
+    background: #fff;
+    object-fit: contain;
+}
+
+.chat-header span {
+    flex: 1;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.chat-header button {
+    padding: 0 5px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.chat-header .chat-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-size: 26px;
+    line-height: 1;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    height: 260px;
+    padding: 12px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.bot-message,
+.user-message {
+    max-width: 85%;
+    margin: 0;
+    padding: 9px 11px;
+    border-radius: 10px;
+    font-size: 11px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background: #edf3ef;
+    color: #193b32;
+}
+
+.user-message {
+    align-self: flex-end;
+    background: #193b32;
+    color: #fff;
+}
+
+.chat-input {
+    display: flex;
+    gap: 6px;
+    padding: 10px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.chat-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 9px;
+    border: 1px solid #d6ddd8;
+    border-radius: 7px;
+    outline: none;
+    font-size: 11px;
+}
+
+.chat-input input:focus {
+    border-color: #193b32;
+}
+
+.chat-input button {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 7px;
+    background: #193b32;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 550px) {
+    .chatbot-button {
+        right: 14px;
+        bottom: 14px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .chatbot-box {
+        right: 10px;
+        bottom: 72px;
+        max-width: calc(100vw - 20px);
+    }
+}
+
+/* Homepage-matched hero height. */
+.tshewangdechen-hero-section {
+    height: 65vh;
+    min-height: 500px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .tshewangdechen-hero-section {
+        height: 60vh;
+        min-height: 440px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .tshewangdechen-hero-section {
+        height: 62svh;
+        min-height: 440px;
+    }
+
+    #tshewangdechen-lodging-card.is-compact {
+        padding: 1rem;
+    }
+
+    #tshewangdechen-lodging-card.is-compact > div:first-child {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    #tshewangdechen-lodging-card.is-compact > div:first-child > label {
+        align-items: flex-start;
+    }
+
+    #tshewangdechen-lodging-card.is-compact > div:last-child > button {
+        min-height: 6.5rem;
+    }
+}
+
+/* Keep plan hero typography aligned at every screen size. */
+.tshewangdechen-hero-title { color: #fff !important; font-size: clamp(38px, 5.5vw, 68px) !important; }
+.tshewangdechen-hero-title span { color: #e6a087 !important; }
+.tshewangdechen-hero-desc { color: rgb(255 255 255 / 83%) !important; font-size: clamp(15px, 1.5vw, 17px) !important; }

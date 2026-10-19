@@ -1,0 +1,1569 @@
+<!doctype html>
+<html lang="en" class="hide-scrollbars">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/stay.css" />
+    <link rel="shortcut icon" href="./assest/Gemini_Generated_Image_bl9c4bbl9c4bbl9c-removebg-preview.png" type="image/x-icon">
+
+    <title>Yul-Go-Ri Stay </title>
+  </head>
+  <body>
+    <!-- HEADER START -->
+    <header class="site-header">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark"
+        aria-label="Main navigation"
+      >
+        <div class="container">
+          <!-- Yul Go Ri Logo -->
+          <a class="navbar-brand" href="index.html#home">
+            <img
+              src="./assest/Gemini_Generated_Image_bl9c4bbl9c4bbl9c-removebg-preview.png"
+              alt="Yul Go Ri Logo"
+              class="site-logo"
+            />
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavigation"
+            aria-controls="mainNavigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Links -->
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"> Home </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About Us </a>
+              </li>
+
+              <!-- Service Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="service.html"> Service </a>
+
+                <button
+                  class="nav-link dropdown-toggle service-menu-toggle"
+                  type="button"
+                  id="serviceDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="Open service menu"
+                ></button>
+
+                <ul class="dropdown-menu" aria-labelledby="serviceDropdown">
+                  <li>
+                    <a class="dropdown-item" href="event.html"> Events </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="tour.html"> Tours </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="stay.html"> Stay </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"> Contact Us </a>
+              </li>
+            </ul>
+
+            <!-- Separate Plan Your Trip Button -->
+            <a href="plan.html" class="trip-button header-trip-button">
+              Plan Your Trip <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER END -->
+
+
+    <!-- HERO IMAGE CAROUSEL -->
+    <div id="carouselExampleDark" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+          <img
+            src="./assest/image/stay.img/stay54.jpg"
+            class="d-block w-100"
+            alt="Bhutan"
+          />
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+          <img
+            src="./assest/image/stay.img/110.jpg"
+            class="d-block w-100"
+            alt="Bhutanese family"
+          />
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+          <img
+            src="./assest/image/stay.img/earth.jpg"
+            class="d-block w-100"
+            alt="Bhutan tourism"
+          />
+        </div>
+      </div>
+
+      <!-- TEXT ON TOP OF THE CAROUSEL -->
+      <div class="carousel-hero-text">
+        <h1>
+          Find Your Perfect<br /><span class="stay-hero-accent"
+            >Place to Stay</span
+          >
+        </h1>
+
+        <p>Discover beautiful hotels, Homestays and lodges across Bhutan.</p>
+      </div>
+
+      <!-- CAROUSEL ARROWS -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- SEARCH BOX BELOW CAROUSEL -->
+    <section class="search-section">
+      <div class="search-box">
+        <select id="category">
+          <option value="all">All Places</option>
+          <option value="paro">Paro</option>
+          <option value="punakha">Punakha</option>
+          <option value="thimphu">Thimphu</option>
+          <option value="trashiyangtse">Trashiyangtse</option>
+          <option value="bumthang">Bumthang</option>
+        </select>
+
+        <select id="stayType">
+          <option value="all">All Stay Types</option>
+          <option value="hotel">Hotel</option>
+          <option value="guesthouse">Homestay</option>
+          <option value="lodge">Lodge</option>
+        </select>
+
+        <button onclick="searchStay()">Search</button>
+      </div>
+
+      <p id="message"></p>
+    </section>
+
+    <!-- EXISTING STAYS SECTION > -->
+    <section class="stays-section" id="stays">
+      <div class="stay-container">
+        <!-- PARO -->
+
+        <div class="stay-card" data-place="paro" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/gakyidiana.webp"
+              alt="Hotel in Paro"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Hotel Gakyidiana</h3>
+
+          <p>Paro</p>
+
+          <p>Stay where nature meets comfort.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            Peaceful stays, beautiful views
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="paro" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/kamsum.webp"
+              alt="Hotel in Paro"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Hotel Khamsum</h3>
+
+          <p>Paro</p>
+          <p>Relax in timeless beautiful Paro.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            Rest among Himalayan beauty
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="paro" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/como1.webp"
+              alt="Hotel in Paro"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>COMO Uma Paro</h3>
+
+          <p>Paro</p>
+
+          <p>Wake up to Paro's beauty.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            Peaceful stays, beautiful views
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="paro" data-type="guesthouse">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/paro 14.jpg"
+              alt="Guest house in Paro(kinley)"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Paro Guest House</h3>
+
+          <p>Paro</p>
+
+          <p>Enjoy a peaceful stay in Paro Valley.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            Peaceful stays, beautiful views
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="paro" data-type="guesthouse">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/village%201.webp"
+              alt="Guest house in Paro(kinley)"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Paro Village stay</h3>
+
+          <p>Paro</p>
+
+          <p>Stay where Paro's soul unfolds</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="paro" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/lodge%201%20paro.jpg"
+              alt="Lodge in Paro"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Paro Eco Lodge</h3>
+
+          <p>Paro</p>
+
+          <p>Relax surrounded by nature.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            Peaceful stays, beautiful views
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="paro" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/amankora.jpg"
+              alt="Lodge in Paro"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Amankora Lodge</h3>
+
+          <p>Paro</p>
+
+          <p>Stay, explore, and cherish Paro</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            Discover comfort surrounded by nature
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="paro" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/six%20sense.jpg"
+              alt="Lodge in Paro"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Six Sense Lodge</h3>
+
+          <p>Paro</p>
+
+          <p>Stay where mountains inspire</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            Experience serenity every day
+          </button>
+        </div>
+
+        <!-- PUNAKHA -->
+        <div class="stay-card" data-place="punakha" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/pamako.jpg"
+              alt="Hotel in Punakha"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>PemaKo</h3>
+
+          <p>Punakha</p>
+
+          <p>Rest in the heart of Punakha</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="punakha" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/caption.jpg"
+              alt="Hotel in Punakha"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Khuru khuru Hotel</h3>
+
+          <p>Punakha</p>
+
+          <p>Comfortable stay in Punakha.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="punakha" data-type="guesthouse">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/happy.jpg"
+              alt="Guest house in Punakha"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Gatshothang Homestay</h3>
+
+          <p>Punakha</p>
+
+          <p>A simple and peaceful guest house.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="punakha" data-type="guesthouse">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/chay%20chay.jpg"
+              alt="Guest house in Punakha"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Chay Chay Stay</h3>
+
+          <p>Punakha</p>
+
+          <p>A simple and peaceful guest house.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="punakha" data-type="guesthouse">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/lala.jpg"
+              alt="Guest house in Punakha"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>lala Homestay</h3>
+
+          <p>Punakha</p>
+
+          <p>A simple and peaceful guest house.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="punakha" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/lodge%200.jpg"
+              alt="Lodge in Punakha"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Spirit Village Lodge</h3>
+
+          <p>Punakha</p>
+
+          <p>Enjoy nature and mountain views.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="punakha" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/forest.jpg"
+              alt="Lodge in Punakha"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Punakha Jungle lodge</h3>
+
+          <p>Punakha</p>
+
+          <p>Enjoy nature and mountain views.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <!-- THIMPHU -->
+
+        <div class="stay-card" data-place="thimphu" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/thimphu.jpg"
+              alt="Hotel in Thimphu"
+            />
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Druk Hotel Thimphu</h3>
+
+          <p>Thimphu</p>
+
+          <p>Stay in the heart of Thimphu.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="thimphu" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/lemon.jpg"
+              alt="Hotel in Thimphu"
+            />
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Lemon Tree Hotel</h3>
+
+          <p>Thimphu</p>
+
+          <p>Stay in the heart of Thimphu.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="thimphu" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/migmar.avif"
+              alt="Hotel in Thimphu"
+            />
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Hotel Migmar</h3>
+
+          <p>Thimphu</p>
+
+          <p>Stay in the heart of Thimphu.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="thimphu" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/lhaki.avif"
+              alt="Hotel in Thimphu"
+            />
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Lhaki Hotel</h3>
+
+          <p>Thimphu</p>
+
+          <p>Stay in the heart of Thimphu.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="thimphu" data-type="guesthouse">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/thimphu2.jpg"
+              alt="Guest house in Thimphu"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Yeedzin Guest House</h3>
+
+          <p>Thimphu</p>
+
+          <p>A simple place to stay in the capital.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="thimphu" data-type="guesthouse">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/damchoe.jpg"
+              alt="Guest house in Thimphu"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Damchoe’s Homestay</h3>
+
+          <p>Thimphu</p>
+
+          <p>A simple place to stay in the capital.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="thimphu" data-type="guesthouse">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/haypi.webp"
+              alt="Guest house in Thimphu"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Happy Homestay</h3>
+
+          <p>Thimphu</p>
+
+          <p>A simple place to stay in the capital.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="thimphu" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/thimphu%203.jpg"
+              alt="Lodge in Thimphu"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Thimphu Nature Lodge</h3>
+
+          <p>Thimphu</p>
+
+          <p>A relaxing stay surrounded by nature.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="thimphu" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/gangty.jpg"
+              alt="Lodge in Thimphu"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Gangtey lodge</h3>
+
+          <p>Thimphu</p>
+
+          <p>A relaxing stay surrounded by nature.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <!-- TRASHIYANGTSE -->
+
+        <div class="stay-card" data-place="trashiyangtse" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/gangty.jpg"
+              alt="Hotel in Trashiyangtse"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Karmaling Hotel</h3>
+
+          <p>Trashiyangtse</p>
+
+          <p>A comfortable stay in eastern Bhutan.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="trashiyangtse" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/tsheringma.jpg"
+              alt="Hotel in Trashiyangtse"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Tsheringma Hotel</h3>
+
+          <p>Trashiyangtse</p>
+
+          <p>A comfortable stay in eastern Bhutan.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="trashiyangtse" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/zongkhar.jpg"
+              alt="Hotel in Trashiyangtse"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Zongkhar Hotel</h3>
+
+          <p>Trashiyangtse</p>
+
+          <p>A comfortable stay in eastern Bhutan.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div
+          class="stay-card"
+          data-place="trashiyangtse"
+          data-type="guesthouse"
+        >
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/yangtse 2.jpg"
+              alt="Guest house in Trashiyangtse"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Trashiyangtse Guest House</h3>
+
+          <p>Trashiyangtse</p>
+
+          <p>A peaceful local accommodation.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div
+          class="stay-card"
+          data-place="trashiyangtse"
+          data-type="guesthouse"
+        >
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/deki.jpg"
+              alt="Guest house in Trashiyangtse"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Dekyil Guest House</h3>
+
+          <p>Trashiyangtse</p>
+
+          <p>A peaceful local accommodation.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div
+          class="stay-card"
+          data-place="trashiyangtse"
+          data-type="guesthouse"
+        >
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/phuntsho.jpg"
+              alt="Guest house in Trashiyangtse"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Phuntsho Guest House</h3>
+
+          <p>Trashiyangtse</p>
+
+          <p>A peaceful local accommodation.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="trashiyangtse" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/yangtse 4.jpg"
+              alt="Lodge in Trashiyangtse"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Bumdeling Eco-Lodge</h3>
+
+          <p>Trashiyangtse</p>
+
+          <p>Enjoy the peaceful surroundings.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="trashiyangtse" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/wangdi.jpg"
+              alt="Lodge in Trashiyangtse"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Wangdi Lodge</h3>
+
+          <p>Trashiyangtse</p>
+
+          <p>Enjoy the peaceful surroundings.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="trashiyangtse" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/pangba.jpg"
+              alt="Lodge in Trashiyangtse"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Pangbang lodge</h3>
+
+          <p>Trashiyangtse</p>
+
+          <p>Enjoy the peaceful surroundings.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <!-- BUMTHANG -->
+
+        <div class="stay-card" data-place="bumthang" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/bum2.jpg"
+              alt="Hotel in Bumthang"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Ugyen Hotel</h3>
+
+          <p>Bumthang</p>
+
+          <p>A family-run stay in Bumthang.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="bumthang" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/ugen.jpg"
+              alt="Hotel in Bumthang"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Hotel UgyenLing</h3>
+
+          <p>Bumthang</p>
+
+          <p>A family-run stay in Bumthang.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="bumthang" data-type="hotel">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/tandin.jpg"
+              alt="Hotel in Bumthang"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Hotel Tandin</h3>
+
+          <p>Bumthang</p>
+
+          <p>A family-run stay in Bumthang.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="bumthang" data-type="guesthouse">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/rinchen.jpg"
+              alt="Guest house in Bumthang"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Rinchen Guest House</h3>
+
+          <p>Bumthang</p>
+
+          <p>A quiet place to enjoy Bumthang.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="bumthang" data-type="guesthouse">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/gongkhar.jpg"
+              alt="Guest house in Bumthang"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Gongkhar Guest House</h3>
+
+          <p>Bumthang</p>
+
+          <p>A quiet place to enjoy Bumthang.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="bumthang" data-type="guesthouse">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/kala.jpg"
+              alt="Guest house in Bumthang"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Kaila GuestHouse</h3>
+
+          <p>Bumthang</p>
+
+          <p>A quiet place to enjoy Bumthang.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="bumthang" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/bum 3.jpg"
+              alt="Lodge in Bumthang"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Amankora Bumthang</h3>
+
+          <p>Bumthang</p>
+
+          <p>Enjoy your Vacation.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+
+        <div class="stay-card" data-place="bumthang" data-type="lodge">
+          <div class="image-box">
+            <img
+              class="stay-image"
+              src="./assest/image/stay.img/montain.jpg"
+              alt="Lodge in Bumthang"
+            />
+
+            <button class="left" onclick="changeImage(this, -1)">❮</button>
+
+            <button class="right" onclick="changeImage(this, 1)">❯</button>
+
+            <div class="dots">
+              <span onclick="showImage(this, 0)"></span>
+              <span onclick="showImage(this, 1)"></span>
+              <span onclick="showImage(this, 2)"></span>
+            </div>
+          </div>
+
+          <h3>Bumthang Mountain Lodge</h3>
+
+          <p>Bumthang</p>
+
+          <p>A stay surrounded by nature.</p>
+
+          <button class="view-btn" onclick="viewStay(this)">
+            “Peaceful stays, beautiful views.”
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER START -->
+    <!-- CHATBOT BUTTON -->
+    <button class="chatbot-button" type="button" onclick="openChat()">
+      <img
+        src="./assest/image/tour.img/final_logo-removebg-preview.png"
+        alt="Yul-Go-Ri logo"
+      />
+    </button>
+
+    <!-- CHATBOT BOX -->
+    <div class="chatbot-box" id="chatbot">
+      <div class="chat-header">
+        <img
+          src="./assest/image/tour.img/final_logo-removebg-preview.png"
+          alt="Yul-Go-Ri logo"
+        />
+        <span>Yul-Go-Ri Assistant</span>
+        <button
+          class="chat-close"
+          type="button"
+          onclick="closeChat()"
+          aria-label="Close chat"
+        >
+          &times;
+        </button>
+      </div>
+
+      <div class="chat-messages" id="messages">
+        <div class="bot-message">
+          Hi! 👋 Welcome to Yul-Go-Ri. Ask me about the sacred places of Bhutan.
+        </div>
+      </div>
+
+      <form class="chat-input" id="chatForm">
+        <input type="text" id="userInput" placeholder="Type your message..." />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <footer class="site-footer text-light" id="contact">
+      <div class="container py-5">
+        <div class="row g-4">
+          <!-- Company links -->
+          <section class="col-12 col-sm-6 col-lg-3 footercard">
+            <h2>Yul Go Ri!</h2>
+
+            <ul class="list-unstyled footer-links">
+              <li><a href="about.html#about">About Us</a></li>
+              <li><a href="contact.html#contact-content">Contact Us</a></li>
+              <li><a href="service.html#services">Our Services</a></li>
+              <li><a href="service.html#services">Travel Guides</a></li>
+              <li><a href="contact.html#contact-content">Privacy Policy</a></li>
+              <li>
+                <a href="contact.html#contact-content">Terms and Conditions</a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Destinations -->
+          <section class="col-12 col-sm-6 col-lg-3 footercard">
+            <h2>Explore Bhutan</h2>
+
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html#home">Thimphu</a></li>
+              <li><a href="index.html#home">Paro</a></li>
+              <li><a href="index.html#home">Punakha</a></li>
+              <li><a href="index.html#home">Phobjikha</a></li>
+              <li><a href="index.html#home">Bumthang</a></li>
+              <li><a href="index.html#home">Haa Valley</a></li>
+            </ul>
+          </section>
+
+          <!-- Activities -->
+          <section class="col-12 col-sm-6 col-lg-3 footercard">
+            <h2>Activities</h2>
+
+            <ul class="list-unstyled footer-links">
+              <li><a href="tour.html#tours">Cultural Tours</a></li>
+              <li><a href="tour.html#tours">Adventure Sports</a></li>
+              <li><a href="tour.html#tours">Trekking</a></li>
+              <li><a href="event.html#events">Festivals</a></li>
+              <li><a href="tour.html#tours">Local Experiences</a></li>
+              <li><a href="tour.html#tours">Nature &amp; Wildlife</a></li>
+            </ul>
+          </section>
+
+          <!-- Services -->
+          <section class="col-12 col-sm-6 col-lg-3 footercard">
+            <h2>Services</h2>
+
+            <ul class="list-unstyled footer-links">
+              <li><a href="tour.html#tours">Tour Packages</a></li>
+              <li><a href="stay.html#stay">Hotels &amp; Lodges</a></li>
+              <li><a href="service.html#services">Transportation</a></li>
+              <li><a href="service.html#services">Travel Guides</a></li>
+              <li><a href="plan.html">Trip Planning</a></li>
+              <li><a href="tour.html#tours">Custom Tours</a></li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom mt-4 pt-3 text-center">
+          <p class="mb-0">&copy; 2026 Yul Go Ri! All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script src="./js/stay.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

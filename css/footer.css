@@ -1,0 +1,496 @@
+/* ---------- ROOT VARIABLES ---------- */
+
+:root {
+  --forest-green: #173f35;
+  --deep-green: #102e27;
+  --light-green: #245749;
+  --gold: #d9b56d;
+  --cream: #f7f5ef;
+  --white: #ffffff;
+  --text-light: #d4ded9;
+  --transition: 0.3s ease;
+}
+
+/* ---------- GENERAL SETTINGS ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Keep a single page scrollbar on the left; hide scrollbars on inner elements. */
+html {
+  direction: rtl;
+  overflow-y: scroll;
+  scrollbar-gutter: auto;
+  scrollbar-width: auto;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  width: 12px;
+}
+
+*:not(html) {
+  scrollbar-width: none !important;
+}
+
+*:not(html)::-webkit-scrollbar {
+  display: none !important;
+}
+
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--cream);
+  color: #222;
+  direction: ltr;
+}
+
+/* header  */
+
+.site-header {
+  width: 100%;
+  background-color: var(--forest-green);
+  border-bottom: 1px solid rgba(217, 181, 109, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+/* Keep page-level overflow rules from clipping the navigation dropdown. */
+.site-header,
+.site-header * {
+  overflow: visible;
+}
+
+/* Navbar */
+
+.site-header .navbar {
+  min-height: 95px;
+  padding: 8px 0;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- LOGO IMAGE ---------- */
+
+.site-header .navbar-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0 35px 0 0;
+}
+
+.site-header .site-logo {
+  display: block;
+  width: 125px;
+  height: 78px;
+  object-fit: contain;
+  /* border-radius: 100%; */
+}
+
+/* ---------- NAVIGATION LAYOUT ---------- */
+
+.site-header .navbar-collapse {
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.site-header .navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 0 0 0 auto;
+  /* border: 2px solid red; */
+}
+
+/* Keep the Service link and its separate menu arrow on one nav row. */
+.site-header .navbar-nav > .nav-item.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation links */
+
+.site-header .navbar-nav .nav-link {
+  position: relative;
+  padding: 12px 14px !important;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+.site-header .navbar-nav .nav-link:hover,
+.site-header .navbar-nav .nav-link:focus,
+.site-header .navbar-nav .nav-link.show {
+  color: var(--gold);
+}
+
+/* Underline hover effect */
+
+.site-header
+  .navbar-nav
+  > .nav-item
+  > .nav-link:not(.service-menu-toggle)::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--gold);
+  transition: width var(--transition);
+}
+
+.site-header
+  .navbar-nav
+  > .nav-item
+  > .nav-link:not(.service-menu-toggle):hover::after {
+  width: calc(100% - 28px);
+}
+
+/* Do not show the underline beneath Service
+   when its dropdown arrow is being used */
+
+.site-header .navbar-nav .dropdown-toggle::after {
+  border-top-color: currentColor;
+}
+
+/* ---------- SERVICE DROPDOWN ---------- */
+
+.site-header .dropdown-menu {
+  min-width: 180px;
+  margin-top: 0;
+  padding: 8px;
+  background-color: var(--white);
+  border: 1px solid rgba(23, 63, 53, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Open the service submenu while hovering over its navigation item. */
+@media (min-width: 992px) {
+  .site-header .navbar-nav > .nav-item.dropdown {
+    position: relative;
+  }
+
+  .site-header .navbar-nav > .nav-item.dropdown:hover > .dropdown-menu,
+  .site-header .navbar-nav > .nav-item.dropdown:focus-within > .dropdown-menu {
+    position: absolute;
+    top: 100% !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: 0 !important;
+    display: block;
+    margin-top: 0;
+    z-index: 1100;
+    transform: none !important;
+  }
+}
+
+.site-header .dropdown-item {
+  padding: 11px 14px;
+  color: var(--forest-green);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.site-header .dropdown-item:hover,
+.site-header .dropdown-item:focus {
+  color: var(--white);
+  background-color: var(--forest-green);
+}
+
+/* ---------- PLAN YOUR TRIP BUTTON ---------- */
+
+.site-header .header-trip-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: 18px;
+  padding: 13px 21px;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  background-color: var(--gold);
+  color: var(--deep-green);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.site-header .header-trip-button span {
+  font-size: 19px;
+}
+
+.site-header .header-trip-button:hover {
+  background-color: transparent;
+  color: var(--gold);
+}
+
+/* ---------- MOBILE MENU BUTTON ---------- */
+
+.site-header .navbar-toggler {
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.site-header .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(217, 181, 109, 0.2);
+}
+
+#karms {
+  width: 100px;
+  height: 200px;
+  background-color: blueviolet;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--deep-green);
+  color: var(--white);
+  border-top: 4px solid var(--gold);
+}
+
+/* Footer container */
+
+.site-footer > .container {
+  padding-top: 65px !important;
+  padding-bottom: 25px !important;
+}
+
+/* Footer columns */
+
+.footercard {
+  padding: 10px 22px;
+}
+
+/* Footer headings */
+
+.footercard h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 27px;
+  color: var(--white);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.footercard h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+  width: 35px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--gold);
+}
+
+/* First footer heading */
+
+.footercard:first-child h2 {
+  color: var(--gold);
+  font-size: 24px;
+}
+
+/* ---------- FOOTER LINKS ---------- */
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.footer-links li {
+  list-style: none;
+}
+
+.footer-links a {
+  display: inline-block;
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+/* ---------- COPYRIGHT ---------- */
+
+.footer-bottom {
+  margin-top: 35px !important;
+  padding-top: 24px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom p {
+  color: #b7c8c0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   TABLETS AND SMALLER LAPTOPS
+========================================= */
+
+@media (max-width: 991.98px) {
+  .site-header .navbar {
+    min-height: 85px;
+  }
+
+  .site-header .site-logo {
+    width: 110px;
+    height: 68px;
+  }
+
+  .site-header .navbar-brand {
+    margin-right: auto;
+  }
+
+  .site-header .navbar-collapse {
+    flex-basis: 100%;
+    padding: 15px 0 12px;
+  }
+
+  .site-header .navbar-nav {
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+  }
+
+  .site-header .navbar-nav .nav-link {
+    padding: 11px 8px !important;
+  }
+
+  .site-header .navbar-nav > .nav-item > .nav-link::after {
+    display: none;
+  }
+
+  .site-header .dropdown-menu {
+    position: static;
+    width: 100%;
+    padding: 4px 8px 8px 20px;
+    margin-top: 0;
+    box-shadow: none;
+    transform: none !important;
+  }
+
+  .site-header .navbar-nav > .nav-item.dropdown {
+    flex-wrap: wrap;
+  }
+
+  .site-header .navbar-nav > .nav-item.dropdown > .dropdown-menu.show {
+    display: block;
+  }
+
+  .site-header .navbar-nav > .nav-item.dropdown:hover > .dropdown-menu,
+  .site-header .navbar-nav > .nav-item.dropdown:focus-within > .dropdown-menu {
+    display: block;
+  }
+
+  .site-header .header-trip-button {
+    display: inline-flex;
+    width: fit-content;
+    margin: 12px 0 5px;
+  }
+
+  .footercard {
+    padding: 10px 15px;
+  }
+}
+
+/* =========================================
+   MOBILE PHONES
+========================================= */
+
+@media (max-width: 575.98px) {
+  .site-header .navbar {
+    min-height: 75px;
+  }
+
+  .site-header .site-logo {
+    width: 95px;
+    height: 62px;
+  }
+
+  .site-footer > .container {
+    padding-top: 40px !important;
+  }
+
+  .footercard {
+    padding: 10px 12px;
+    text-align: center;
+  }
+
+  .footercard h2 {
+    font-size: 18px;
+  }
+
+  .footercard h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footercard:first-child h2 {
+    font-size: 23px;
+  }
+
+  .footer-links {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px !important;
+    padding-top: 18px !important;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+
+.site-header a:focus-visible,
+.site-footer a:focus-visible,
+.site-header button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}

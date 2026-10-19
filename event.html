@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en" class="hide-scrollbars">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/event.css" />
+    <link rel="shortcut icon" href="./assest/Gemini_Generated_Image_bl9c4bbl9c4bbl9c-removebg-preview.png" type="image/x-icon">
+     <title> Yul-Go-Ri Events </title>
+  </head>
+  <body>
+    <!-- HEADER START -->
+    <header class="site-header">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark"
+        aria-label="Main navigation"
+      >
+        <div class="container">
+          <!-- Yul Go Ri Logo -->
+          <a class="navbar-brand" href="index.html#home">
+            <img
+              src="./assest/Gemini_Generated_Image_bl9c4bbl9c4bbl9c-removebg-preview.png"
+              alt="Yul Go Ri Logo"
+              class="site-logo"
+            />
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavigation"
+            aria-controls="mainNavigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Links -->
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"> Home </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About Us </a>
+              </li>
+
+              <!-- Service Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="service.html"> Service </a>
+
+                <button
+                  class="nav-link dropdown-toggle service-menu-toggle"
+                  type="button"
+                  id="serviceDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="Open service menu"
+                ></button>
+
+                <ul class="dropdown-menu" aria-labelledby="serviceDropdown">
+                  <li>
+                    <a class="dropdown-item" href="event.html"> Events </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="tour.html"> Tours </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="stay.html"> Stay </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"> Contact Us </a>
+              </li>
+            </ul>
+
+            <!-- Separate Plan Your Trip Button -->
+            <a href="plan.html" class="trip-button header-trip-button">
+              Plan Your Trip <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- header ends here  -->
+ 
+    <section class="festival-section">
+      <!-- HERO CAROUSEL -->
+      <div id="festivalCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#festivalCarousel"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#festivalCarousel"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#festivalCarousel"
+            data-bs-slide-to="2"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="./assest/image/event/1.jpg" alt="Bhutanese heritage" />
+            <div class="carousel-hero-text">
+              <p class="hero-eyebrow">TRADITION & CULTURE</p>
+              <h1>Discover <br />Our Heritage.</h1>
+              <p class="hero-description">
+                Explore the colorful celebrations that bring Bhutanese
+                communities together.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="./assest/image/event/2.jpg" alt="Bhutanese traditions" />
+            <div class="carousel-hero-text">
+              <p class="hero-eyebrow">THE SPIRIT OF BHUTAN</p>
+              <h1>Traditions <br />Come Alive.</h1>
+              <p class="hero-description">
+                Discover sacred ceremonies, traditional performances and
+                unforgettable experiences.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="./assest/image/event/3.jpg" alt="Eastern Bhutan" />
+            <div class="carousel-hero-text">
+              <p class="hero-eyebrow">FESTIVALS & DRUP</p>
+              <h1>Celebrate <br />Bhutan.</h1>
+              <p class="hero-description">
+                Experience eastern Bhutan's vibrant festivals, sacred dances and
+                rich traditions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#festivalCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#festivalCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <!-- EASTERN BHUTAN FESTIVALS -->
+      <div class="festival-container">
+        <!-- DRAMETSE NGACHAM -->
+        <div class="festival-card">
+          <div class="festival-image">
+            <img src="./assest/image/event/drametse ngacham.avif" alt="Drametse Ngacham" />
+            <p class="image-date">5TH & 10TH LUNAR MONTHS</p>
+          </div>
+
+          <div class="festival-info">
+            <p class="location">DRAMETSE · MONGAR</p>
+            <h2>Drametse Ngacham</h2>
+            <p class="description">
+              A sacred masked drum dance performed in traditional costumes,
+              celebrating Bhutan's living cultural heritage.
+            </p>
+
+            <div class="button-container">
+              <a class="event-book" href="plan.html">Book Now</a>
+
+              <button
+                class="more-info"
+                type="button"
+                data-title="Drametse Ngacham"
+                data-location="DRAMETSE · MONGAR"
+                data-date="5TH & 10TH MONTHS OF THE BHUTANESE LUNAR CALENDAR"
+                data-description="Drametse Ngacham is a traditional sacred masked drum dance associated with Drametse Monastery in Mongar, eastern Bhutan."
+              >
+                <i class="fa-solid fa-circle-info"></i> More Info
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHORTEN KORA FESTIVAL -->
+        <div class="festival-card">
+          <div class="festival-image">
+            <img
+              src="./assest/image/event/chorten-kora-festival.jpg"
+              alt="Chorten Kora Festival"
+            />
+            <p class="image-date">1ST BHUTANESE LUNAR MONTH</p>
+          </div>
+
+          <div class="festival-info">
+            <p class="location">CHORTEN KORA · TRASHIYANGTSE</p>
+            <h2>Chorten Kora Festival</h2>
+            <p class="description">
+              A religious festival where pilgrims gather for prayers,
+              circumambulation and traditional observances.
+            </p>
+
+            <div class="button-container">
+              <a class="event-book" href="plan.html">Book Now</a>
+             
+              <button
+                class="more-info"
+                type="button"
+                data-title="Chorten Kora Festival"
+                data-location="CHORTEN KORA · TRASHIYANGTSE"
+                data-date="1ST BHUTANESE LUNAR MONTH; DATES VARY EACH YEAR"
+                data-description="Chorten Kora Festival is held at the historic stupa in Trashiyangtse, eastern Bhutan. Pilgrims gather for circumambulation and religious observances."
+              >
+                <i class="fa-solid fa-circle-info"></i> More Info
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRASHIYANGTSE FESTIVAL -->
+        <div class="festival-card">
+          <div class="festival-image">
+            <img
+              src="./assest/image/event/Trashiayngtse Tshechu (4).jpg"
+              alt="Trashiyangtse Festival"
+            />
+            <p class="image-date">DATES VARY BY LOCAL CALENDAR</p>
+          </div>
+
+          <div class="festival-info">
+            <p class="location">TRASHIYANGTSE · EASTERN BHUTAN</p>
+            <h2>Trashiyangtse Festival</h2>
+            <p class="description">
+              Discover local culture, community customs, traditional
+              performances and the heritage of eastern Bhutan.
+            </p>
+
+            <div class="button-container">
+              <a class="event-book" href="plan.html">Book Now</a>
+
+              <button
+                class="more-info"
+                type="button"
+                data-title="Trashiyangtse Festival"
+                data-location="TRASHIYANGTSE · EASTERN BHUTAN"
+                data-date="CHECK THE LOCAL FESTIVAL CALENDAR"
+                data-description="This card highlights local cultural and religious traditions in Trashiyangtse. Confirm the specific event and annual dates with local organizers before visiting."
+              >
+                <i class="fa-solid fa-circle-info"></i> More Info
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MONGAR TSHETCHU -->
+        <div class="festival-card">
+          <div class="festival-image">
+            <img src="./assest/image/event/mongar.jpg" alt="Mongar Tshechu" />
+            <p class="image-date">DATES FOLLOW THE LUNAR CALENDAR</p>
+          </div>
+
+          <div class="festival-info">
+            <p class="location">MONGAR · MONGAR DZONG</p>
+            <h2>Mongar Drupchen</h2>
+            <p class="description">
+              A religious festival featuring sacred masked dances, ceremonies
+              and community gatherings.
+            </p>
+
+            <div class="button-container">
+              <a class="event-book" href="plan.html">Book Now</a>
+
+              <button
+                class="more-info"
+                type="button"
+                data-title="Mongar Tshechu"
+                data-location="MONGAR · MONGAR DZONG"
+                data-date="DATES VARY BY THE BHUTANESE LUNAR CALENDAR"
+                data-description="Mongar Tshechu is a religious festival in eastern Bhutan featuring sacred dances and traditional celebrations. Check the official annual calendar for exact dates."
+              >
+                <i class="fa-solid fa-circle-info"></i> More Info
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRASHIGANG TSHETCHU -->
+        <div class="festival-card">
+          <div class="festival-image">
+            <img src="./assest/image/event/tashigang.jpg" alt="Trashigang Tshechu" />
+            <p class="image-date">DATES FOLLOW THE LUNAR CALENDAR</p>
+          </div>
+
+          <div class="festival-info">
+            <p class="location">TRASHIGANG · TRASHIGANG DZONG</p>
+            <h2>Trashigang Drupchen</h2>
+            <p class="description">
+              A vibrant religious festival featuring sacred masked dances,
+              traditional music and gatherings from eastern Bhutan.
+            </p>
+
+            <div class="button-container">
+              <a class="event-book" href="plan.html">Book Now</a>
+
+              <button
+                class="more-info"
+                type="button"
+                data-title="Trashigang Tshechu"
+                data-location="TRASHIGANG · TRASHIGANG DZONG"
+                data-date="DATES VARY BY THE BHUTANESE LUNAR CALENDAR"
+                data-description="Trashigang Tshechu is a well-known religious festival in eastern Bhutan. Visitors gather at Trashigang Dzong to watch sacred dances and take part in traditional celebrations."
+              >
+                <i class="fa-solid fa-circle-info"></i> More Info
+              </button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- GOMPHU KORA -->
+        <div class="festival-card">
+          <div class="festival-image">
+            <img src="./assest/image/event/gomphu kora.jpg" alt="Gomphu Kora Festival" />
+            <p class="image-date">2ND BHUTANESE LUNAR MONTH</p>
+          </div>
+
+          <div class="festival-info">
+            <p class="location">GOMPHU KORA · TRASHIYANGTSE</p>
+            <h2>Gomphu Kora Drupchen</h2>
+            <p class="description">
+              A sacred annual gathering where pilgrims circle the temple and
+              take part in religious and cultural traditions.
+            </p>
+
+            <div class="button-container">
+              <a class="event-book" href="plan.html">Book Now</a>
+
+              <button
+                class="more-info"
+                type="button"
+                data-title="Gomphu Kora Festival"
+                data-location="GOMPHU KORA · TRASHIYANGTSE"
+                data-date="2ND BHUTANESE LUNAR MONTH; DATES VARY EACH YEAR"
+                data-description="Gomphu Kora Festival is held in Trashiyangtse, eastern Bhutan. Pilgrims gather for circumambulation, prayers and traditional observances. Exact dates change each year."
+              >
+                <i class="fa-solid fa-circle-info"></i> More Info
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE INFO POPUP -->
+    <div id="info-popup" class="info-popup">
+      <div class="info-box">
+        <button id="close-info" type="button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <p class="popup-small-title">FESTIVALS & DRUP · BHUTAN</p>
+        <h2 id="info-title"></h2>
+
+        <div class="popup-details">
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="info-location"></span>
+          </p>
+          <p>
+            <i class="fa-regular fa-calendar"></i>
+            <span id="info-date"></span>
+          </p>
+        </div>
+
+        <div class="popup-section">
+          <h3><i class="fa-solid fa-book-open"></i> About the Event</h3>
+          <p id="info-description"></p>
+        </div>
+
+        <div class="popup-section">
+          <h3><i class="fa-solid fa-landmark"></i> Cultural Significance</h3>
+          <p id="info-culture"></p>
+        </div>
+
+        <div class="popup-section">
+          <h3><i class="fa-solid fa-star"></i> What to Experience</h3>
+          <ul id="info-activities"></ul>
+        </div>
+
+        <div class="popup-section">
+          <h3><i class="fa-solid fa-lightbulb"></i> Visitor Tips</h3>
+          <p id="info-tips"></p>
+        </div>
+
+        <p class="popup-footer">
+          Discover Bhutan · Experience Our Living Heritage
+        </p>
+      </div>
+    </div>
+
+    <!-- header end here -->
+
+    <!-- FOOTER START -->
+    <!-- CHATBOT BUTTON -->
+    <button class="chatbot-button" type="button" onclick="openChat()">
+      <img
+        src="./assest/image/tour.img/final_logo-removebg-preview.png"
+        alt="Yul-Go-Ri logo"
+      />
+    </button>
+
+    <!-- CHATBOT BOX -->
+    <div class="chatbot-box" id="chatbot">
+      <div class="chat-header">
+        <img
+          src="./assest/image/tour.img/final_logo-removebg-preview.png"
+          alt="Yul-Go-Ri logo"
+        />
+        <span>Yul-Go-Ri Assistant</span>
+        <button type="button" onclick="closeChat()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="chat-messages" id="messages">
+        <div class="bot-message">
+          Hi! 👋 Welcome to Yul-Go-Ri. Ask me about the sacred places of Bhutan.
+        </div>
+      </div>
+
+      <form class="chat-input" id="chatForm">
+        <input type="text" id="userInput" placeholder="Type your message..." />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <footer class="site-footer text-light" id="contact">
+      <div class="container py-5">
+        <div class="row g-4">
+          <!-- Company links -->
+          <section class="col-12 col-sm-6 col-lg-3 footercard">
+            <h2>Yul Go Ri!</h2>
+
+            <ul class="list-unstyled footer-links">
+              <li><a href="about.html#about">About Us</a></li>
+              <li><a href="contact.html#contact-content">Contact Us</a></li>
+              <li><a href="service.html#services">Our Services</a></li>
+              <li><a href="service.html#services">Travel Guides</a></li>
+              <li><a href="contact.html#contact-content">Privacy Policy</a></li>
+              <li>
+                <a href="contact.html#contact-content">Terms and Conditions</a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Destinations -->
+          <section class="col-12 col-sm-6 col-lg-3 footercard">
+            <h2>Explore Bhutan</h2>
+
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html#home">Thimphu</a></li>
+              <li><a href="index.html#home">Paro</a></li>
+              <li><a href="index.html#home">Punakha</a></li>
+              <li><a href="index.html#home">Phobjikha</a></li>
+              <li><a href="index.html#home">Bumthang</a></li>
+              <li><a href="index.html#home">Haa Valley</a></li>
+            </ul>
+          </section>
+
+          <!-- Activities -->
+          <section class="col-12 col-sm-6 col-lg-3 footercard">
+            <h2>Activities</h2>
+
+            <ul class="list-unstyled footer-links">
+              <li><a href="tour.html#tours">Cultural Tours</a></li>
+              <li><a href="tour.html#tours">Adventure Sports</a></li>
+              <li><a href="tour.html#tours">Trekking</a></li>
+              <li><a href="event.html#events">Festivals</a></li>
+              <li><a href="tour.html#tours">Local Experiences</a></li>
+              <li><a href="tour.html#tours">Nature &amp; Wildlife</a></li>
+            </ul>
+          </section>
+
+          <!-- Services -->
+          <section class="col-12 col-sm-6 col-lg-3 footercard">
+            <h2>Services</h2>
+
+            <ul class="list-unstyled footer-links">
+              <li><a href="tour.html#tours">Tour Packages</a></li>
+              <li><a href="stay.html#stay">Hotels &amp; Lodges</a></li>
+              <li><a href="service.html#services">Transportation</a></li>
+              <li><a href="service.html#services">Travel Guides</a></li>
+              <li><a href="plan.html">Trip Planning</a></li>
+              <li><a href="tour.html#tours">Custom Tours</a></li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom mt-4 pt-3 text-center">
+          <p class="mb-0">&copy; 2026 Yul Go Ri! All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script src="./js/event.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

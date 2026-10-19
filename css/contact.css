@@ -1,0 +1,895 @@
+:root {
+  --ink: #193b32;
+  --muted-ink: #52675f;
+  --paper: #fbfaf5;
+  --line: #e7e9df;
+  --accent: #d95e43;
+  --footer-bg: #102a2a;
+  --dechen-maroon-dark: #120a0b;
+  --dechen-maroon: #6b1418;
+  --dechen-saffron: #d4af37;
+  --tshewang-gold: #d4af37;
+  --tshewang-gold-light: #f4df9b;
+  --tshewang-radius: 10px;
+  --dechen-shadow: 0 8px 24px rgb(18 10 11 / 10%);
+  --tshewang-border: #e4ddd3;
+  --tshewang-bg-light: #fbfaf5;
+  --tshewang-text-dark: #2a2422;
+  --dechen-text-muted: #746a62;
+  --dechen-transition: 0.2s ease;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+
+.site-header,
+.site-footer,
+.site-footer h2 {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Desktop dropdown hover */
+
+@media (min-width: 992px) {
+  .site-header .nav-item.dropdown:hover > .dropdown-menu,
+  .site-header .nav-item.dropdown:focus-within > .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Mobile menu toggle */
+
+.trip-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 16px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.trip-button:hover,
+.trip-button:focus {
+  border-color: #e87960;
+  background: #e87960;
+  color: #fff;
+}
+
+.trip-button span {
+  color: #f4a28a;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+.dechen-heading-font,
+.tshewang-brand-title {
+  font-family: "Cinzel", serif;
+}
+
+/* Helper & Global Layout Classes */
+.dechen-wrapper {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tshewang-section-padding {
+  padding: 80px 0;
+}
+
+.dechen-bg-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--dechen-maroon-dark) 0%,
+    var(--dechen-maroon) 100%
+  );
+  color: #ffffff;
+}
+
+/* Top Bar */
+.dechen-topbar {
+  background-color: #120a0b;
+  color: #d1c7bd;
+  font-size: 0.85rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.tshewang-topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dechen-topbar-info {
+  display: flex;
+  gap: 20px;
+}
+
+.tshewang-topbar-info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tshewang-topbar-info-item i {
+  color: var(--tshewang-gold);
+}
+
+.tshewang-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.tshewang-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Banner */
+.tshewang-hero {
+  position: relative;
+  background:
+    linear-gradient(rgba(18, 10, 11, 0.7), rgba(107, 20, 24, 0.8)),
+    url("../assest/image/contact img/images(buddha point).jpg") center/cover no-repeat;
+  padding: 100px 0 120px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.dechen-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: var(--tshewang-gold-light);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tshewang-hero-tagline {
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin: 0 auto 25px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.dechen-hero-badge {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.2);
+  border: 1px solid var(--tshewang-gold);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--tshewang-gold-light);
+}
+
+
+/* Info Cards Grid */
+.dechen-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+}
+
+.tshewang-info-card {
+  background: #ffffff;
+  box-shadow: 0 5px 10px black;
+  padding: 30px 25px;
+  border-radius: var(--tshewang-radius);
+  box-shadow: var(--dechen-shadow);
+  border-top: 4px solid var(--dechen-maroon);
+  transition: var(--dechen-transition);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.tshewang-info-card:hover {
+  transform: translateY(-5px);
+  border-top-color: var(--tshewang-gold);
+}
+
+.dechen-card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(107, 20, 24, 0.06);
+  color: var(--dechen-maroon);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 18px;
+}
+
+.tshewang-card-title {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  color: var(--tshewang-text-dark);
+}
+
+.dechen-card-desc {
+  font-size: 0.92rem;
+  color: var(--dechen-text-muted);
+  line-height: 1.5;
+}
+
+.dechen-card-link {
+  color: var(--dechen-maroon);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 8px;
+  transition: var(--dechen-transition);
+}
+
+.dechen-card-link:hover {
+  color: var(--dechen-saffron);
+}
+.tshewang-info-card {
+  box-shadow: 0 4px 10px black;
+  /* border: 1px solid black; */
+}
+
+/* Section Header Layout */
+.tshewang-section-title-wrapper {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.dechen-subheading {
+  color: var(--dechen-saffron);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.tshewang-main-heading {
+  font-size: 2.2rem;
+  color: var(--dechen-maroon);
+  margin-bottom: 12px;
+}
+
+.tshewang-title-divider {
+  width: 80px;
+  height: 3px;
+  background: var(--tshewang-gold);
+  margin: 0 auto;
+  position: relative;
+}
+
+.tshewang-title-divider::after {
+  content: "◆";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--tshewang-bg-light);
+  padding: 0 6px;
+  color: var(--dechen-maroon);
+  font-size: 0.8rem;
+}
+
+/* Main Contact */
+.tshewang-contact-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Form Container */
+.dechen-form-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: var(--tshewang-radius);
+  box-shadow: var(--dechen-shadow);
+  border: 1px solid var(--tshewang-border);
+}
+
+.tshewang-form-group {
+  margin-bottom: 22px;
+}
+
+.dechen-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tshewang-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: var(--tshewang-text-dark);
+}
+
+.tshewang-label span {
+  color: #d9534f;
+}
+
+.dechen-input-wrapper {
+  position: relative;
+}
+
+.dechen-input-wrapper i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dechen-text-muted);
+  font-size: 0.95rem;
+}
+
+.tshewang-input,
+.dechen-select,
+.tshewang-textarea {
+  width: 100%;
+  padding: 12px 15px 12px 42px;
+  border: 1px solid var(--tshewang-border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: #faf8f5;
+  transition: var(--dechen-transition);
+}
+
+.tshewang-textarea {
+  padding-left: 15px;
+  resize: vertical;
+  min-height: 130px;
+}
+
+.tshewang-input:focus,
+.dechen-select:focus,
+.tshewang-textarea:focus {
+  outline: none;
+  border-color: var(--dechen-maroon);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(107, 20, 24, 0.1);
+}
+
+.dechen-submit-btn {
+  background-color: #174f43;
+  color: #ffffff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: var(--dechen-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--tshewang-gold);
+}
+
+.dechen-submit-btn:hover {
+  background: linear-gradient(135deg, var(--tshewang-gold) 0%, #b89428 100%);
+  color: var(--dechen-maroon-dark);
+  /* background-color: #174f43; */
+  border: 1px solid black;
+}
+
+/* Direct Hours Widget */
+.tshewang-hours-list {
+  list-style: none;
+}
+
+.dechen-hour-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--tshewang-border);
+  font-size: 0.9rem;
+}
+
+.dechen-hour-item:last-child {
+  border-bottom: none;
+}
+
+.tshewang-day {
+  font-weight: 600;
+  color: var(--tshewang-text-dark);
+}
+
+.dechen-time {
+  color: var(--dechen-text-muted);
+}
+
+/* Interactive Map Section */
+.tshewang-map-section {
+  background: #ffffff;
+  border-radius: var(--tshewang-radius);
+  box-shadow: var(--dechen-shadow);
+  overflow: hidden;
+  border: 1px solid var(--tshewang-border);
+}
+
+.dechen-map-tabs {
+  display: flex;
+  background: #23191a;
+  border-bottom: 2px solid var(--tshewang-gold);
+}
+
+.tshewang-map-tab {
+  flex: 1;
+  padding: 15px;
+  background: none;
+  border: none;
+  color: #d1c7bd;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--dechen-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tshewang-map-tab.dechen-active-tab {
+  background: var(--dechen-maroon);
+  border-radius: 10px;
+}
+
+.tshewang-map-tab:hover:not(.dechen-active-tab) {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.dechen-map-viewport {
+  position: relative;
+  height: 380px;
+  background-color: #e5e3df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dechen-map-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.tshewang-map-overlay-card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  max-width: 320px;
+  border-left: 4px solid var(--dechen-maroon);
+}
+
+.dechen-overlay-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dechen-maroon);
+  margin-bottom: 5px;
+}
+
+.tshewang-overlay-desc {
+  font-size: 0.85rem;
+  color: var(--dechen-text-muted);
+}
+
+/* Footer styles are handled by the main site footer stylesheet. */
+
+/* Modal / Dynamic Toast Notifications */
+.dechen-modal-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.dechen-modal-overlay.tshewang-modal-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.tshewang-modal-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: var(--tshewang-radius);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-top: 5px solid var(--tshewang-gold);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.dechen-modal-overlay.tshewang-modal-active .tshewang-modal-card {
+  transform: translateY(0);
+}
+
+.dechen-success-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(46, 125, 50, 0.1);
+  color: #2e7d32;
+  font-size: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.tshewang-modal-title {
+  font-size: 1.6rem;
+  color: var(--dechen-maroon);
+  margin-bottom: 10px;
+}
+
+.dechen-modal-msg {
+  color: var(--dechen-text-muted);
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.tshewang-modal-close {
+  background: var(--dechen-maroon);
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--dechen-transition);
+}
+
+.tshewang-modal-close:hover {
+  background: var(--tshewang-gold);
+  color: var(--dechen-maroon);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .tshewang-contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tshewang-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dechen-topbar {
+    display: none;
+  }
+
+  .dechen-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dechen-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .dechen-nav-menu {
+    display: none; /* Can be expanded for mobile drawer if needed */
+  }
+
+  .tshewang-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ========================================
+   TABLET RESPONSIVE STYLES
+======================================== */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .site-header .nav-link.active::after {
+    right: auto;
+    width: 35px;
+    left: 8px;
+  }
+
+  .site-header .nav-item.ms-lg-3 {
+    margin-left: 0 !important;
+  }
+
+  .trip-button {
+    margin-top: 8px;
+  }
+
+}
+
+/* ========================================
+   MOBILE RESPONSIVE STYLES
+======================================== */
+
+@media (max-width: 767.98px) {
+  .site-header .nav-item {
+    width: 100%;
+  }
+
+  .site-header .nav-link.active::after {
+    right: auto;
+    bottom: 3px;
+    left: 10px;
+    width: 35px;
+  }
+
+  .trip-button {
+    display: flex;
+    width: fit-content;
+    min-height: 42px;
+    margin-top: 10px;
+  }
+
+}
+
+/* ========================================
+   SMALL MOBILE SCREENS
+======================================== */
+
+@media (max-width: 400px) {
+  .trip-button {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+}
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header *,
+  .site-footer *,
+  .trip-button {
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+/* Chatbot copied from the tour page */
+.chatbot-button {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1500;
+  width: 54px;
+  height: 54px;
+  padding: 2px;
+  overflow: hidden;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+  cursor: pointer;
+}
+
+.chatbot-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.chatbot-box {
+  position: fixed;
+  right: 22px;
+  bottom: 88px;
+  z-index: 1500;
+  display: none;
+  flex-direction: column;
+  width: 310px;
+  max-width: calc(100vw - 30px);
+  overflow: hidden;
+  border: 1px solid #e7e9df;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 5px 22px rgb(0 0 0 / 20%);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #102a2a;
+  color: #fff;
+}
+
+.chat-header img {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  margin-right: 9px;
+  border-radius: 50%;
+  background: #fff;
+  object-fit: contain;
+}
+
+.chat-header span {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.chat-header button {
+  padding: 0 5px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.chat-header .chat-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  height: 260px;
+  padding: 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.bot-message,
+.user-message {
+  max-width: 85%;
+  margin: 0;
+  padding: 9px 11px;
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background: #edf3ef;
+  color: #193b32;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: #193b32;
+  color: #fff;
+}
+
+.chat-input {
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.chat-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid #d6ddd8;
+  border-radius: 7px;
+  outline: none;
+  font-size: 11px;
+}
+
+.chat-input input:focus {
+  border-color: #193b32;
+}
+
+.chat-input button {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 7px;
+  background: #193b32;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .chatbot-button {
+    right: 14px;
+    bottom: 14px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .chatbot-box {
+    right: 10px;
+    bottom: 72px;
+    max-width: calc(100vw - 20px);
+  }
+}
+
+/* Homepage-matched hero height. */
+.tshewang-hero {
+  height: 65vh;
+  min-height: 500px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .tshewang-hero {
+    height: 60vh;
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .tshewang-hero {
+    height: 62svh;
+    min-height: 440px;
+  }
+}
+
+/* Keep contact hero typography aligned at every screen size. */
+.dechen-hero-title { color: #fff !important; font-size: clamp(38px, 5.5vw, 68px) !important; }
+.tshewang-hero-tagline { color: rgb(255 255 255 / 83%) !important; font-size: clamp(15px, 1.5vw, 17px) !important; }
+.dechen-hero-badge { color: #e5b69f !important; font-size: 11px !important; }
+.dechen-hero-title .contact-hero-accent { color: #e6a087 !important; }

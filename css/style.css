@@ -1,0 +1,894 @@
+:root {
+  --ink: #193b32;
+  --muted-ink: #52675f;
+  --paper: #fbfaf5;
+  --line: #e7e9df;
+  --accent: #d95e43;
+  --footer-bg: #102a2a;
+}
+
+/* Put the page scrollbar on the left while keeping page content left-to-right. */
+html {
+  direction: rtl;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+/* Keep the homepage's global overflow rule from clipping footer content. */
+.site-footer * {
+  overflow: visible;
+}
+
+body {
+  direction: ltr;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+
+/* hero section */
+.section-top {
+  width: 100%;
+  min-height: 500px;
+  height: 65vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assest/image/punakah\ project1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  animation: change 35s infinite ease-in-out;
+}
+
+.section-top::before {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(0 0 0 / 58%), rgb(0 0 0 / 20%));
+  content: "";
+}
+
+/* herosection text  */
+.section-top .content {
+  position: relative;
+  z-index: 1;
+  width: min(90%, 850px);
+  max-width: none;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.section-top .content small {
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.section-top .content strong {
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.12;
+  text-align: center;
+  padding: 0 10px;
+  color: #ffffff;
+  /* font-family: "Poppins", sans-serif; */
+   font-family: "Fraunces", serif;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.section-top .content span {
+  max-width: 650px;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.6;
+  text-align: center;
+  padding: 10px;
+  color: #f1f5f3;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+
+/* herosection animation */
+@keyframes change {
+  0% {
+    background-image: url("../assest/image/cham.jpg");
+    background-size: 115%;
+    background-position: center;
+  }
+
+  15% {
+    background-size: 125%;
+    background-position: center;
+  }
+
+  16% {
+    background-image: url("../assest/image/dochula.jpg");
+    background-size: 115%;
+    background-position: center;
+  }
+
+  31% {
+    background-size: 125%;
+    background-position: top center;
+  }
+
+  32% {
+    background-image: url("../assest/image/parothaksang.jpg");
+    background-size: 115%;
+    background-position: center;
+  }
+
+  47% {
+    background-size: 125%;
+    background-position: center right;
+  }
+
+  48% {
+    background-image: url("../assest/image/treeking\(experence\ bhutan\).jpg");
+    background-size: 115%;
+    background-position: center;
+  }
+
+  63% {
+    background-size: 125%;
+    background-position: bottom center;
+  }
+
+  64% {
+    background-image: url("../assest/image/tsho.jpg");
+    background-size: 115%;
+    background-position: center;
+  }
+
+  79% {
+    background-size: 125%;
+    background-position: center left;
+  }
+
+  80% {
+    background-image: url("../assest/image/treeking\(experence\ bhutan\).jpg");
+    background-size: 115%;
+    background-position: center;
+  }
+
+  100% {
+    background-size: 125%;
+    background-position: center;
+  }
+}
+
+/* button of hero section(learn more and explore bhutan) */
+
+.karma-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 10px;
+}
+
+/* both button(explore bhutan and learn more)  */
+.karma-buttons a {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+/* explore more button  */
+.explore-bhutan {
+  background-color: #2f6b5f;
+  color: white;
+  border: 2px solid #2f6b5f;
+}
+
+.explore-bhutan:hover {
+  background-color: #c89b3c;
+  border-color: #c89b3c;
+  transform: translateX(4px);
+}
+
+.explore-bhutan:active {
+  transform: translateX(-3px);
+}
+
+/* learn more button  */
+.learn-more {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.learn-more:hover {
+  background-color: white;
+  color: #102a2a;
+  transform: translateX(4px);
+}
+
+.learn-more:active {
+  transform: translateX(-3px);
+}
+
+/* experence Bhutan  */
+#experencebhutan-text {
+  width: 100%;
+  padding: 0.3rem;
+  margin-top: 3.5rem;
+  /* border: 3px solid black; */
+}
+
+#experence-bhutan #experence-text,
+#secondary-text {
+  color: #243333;
+  text-align: center;
+  padding: 3px;
+}
+
+#experence-text {
+  color: #243333;
+  text-align: center;
+  padding: 5px;
+  font-weight: 800;
+  font-size: 40px;
+  text-shadow: 0 2px 6px rgba(15, 23, 42, 0.18);
+  font-family: "Playfair Display", serif;
+}
+
+/* four boxes  */
+#experence-bhutan {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding: 20px 35px;
+  /* align-items: stretch; */
+  flex-wrap: wrap;
+}
+
+.image-box {
+  width: calc(25% - 27px);
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.image-box:hover {
+  transform: translateY(-5px);
+}
+
+.experence-bhutan-img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.experence-bhutan-img:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s ease-in-out;
+}
+
+/* that that is present inside of experence  */
+.experence-content {
+  padding: 25px 30px 28px;
+  /* border: 2px solid brown; */
+}
+
+/* Icon */
+.experence-content i {
+  display: block;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 38px;
+  color: #557985;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.experence-content h3 {
+  font-size: 23px;
+  color: #234957;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* experence-text-description  */
+/* Description */
+.experence-content .experence-text-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #647984;
+  text-align: center;
+}
+
+/* iconic attraction */
+#Iconicattraction-text-box {
+  width: 100%;
+  padding: 0.3rem;
+  margin-top: 3.5rem;
+  /* border: 3px solid black; */
+}
+
+#Iconicattraction-text-box #Iconicattraction-text,
+#Iconicattraction-text-box #Iconicattraction-secondary-text {
+  color: #243333;
+  text-align: center;
+  padding: 3px;
+}
+
+#Iconicattraction-text {
+  color: #243333;
+  text-align: center;
+  padding: 5px;
+  font-weight: 800;
+  font-size: 40px;
+  text-shadow: 0 2px 6px rgba(15, 23, 42, 0.18);
+  font-family: "Playfair Display", serif;
+}
+
+/* three boxes */
+#Iconicattraction-bhutan {
+  display: flex;
+  gap: 5px;
+  padding: 20px 35px;
+  /* border: 3px solid purple; */
+}
+
+/* image box */
+.Iconicattraction-image-box {
+  width: calc(33.333% - 10px);
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: transform 0.4s ease-in-out;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
+}
+
+.Iconicattraction-image-box:hover {
+  transform: translateY(-5px);
+  transition: transform 0.7s ease-in-out;
+}
+
+/* image */
+.Iconicattraction-bhutan-img {
+  width: 100%;
+  height: 215px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.Iconicattraction-bhutan-img:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s ease-in-out;
+}
+
+/* content inside attraction */
+.Iconicattraction-content {
+  padding: 25px 30px 28px;
+  /* border: 2px solid brown; */
+}
+
+/* Heading */
+.Iconicattraction-content h3 {
+  font-size: 23px;
+  color: #234957;
+  margin-bottom: 18px;
+}
+
+/* Description */
+.Iconicattraction-content .Iconicattraction-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #647984;
+  text-align: left;
+}
+
+.why-Yul-gori {
+  width: 100%;
+  background: #fff;
+  padding: 42px 30px 48px;
+}
+
+.why-container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+/* HEADING */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #31595a;
+}
+
+.section-heading h2::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 2px;
+  margin: 8px auto 0;
+  background: #75968e;
+}
+
+.section-heading p {
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #728481;
+}
+
+/* BENEFITS */
+
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* EACH BENEFIT  */
+
+.benefit {
+  flex: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* ICON  */
+
+.icon {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #638b84;
+  border-radius: 50%;
+  color: #527d76;
+  font-size: 25px;
+}
+
+.icon i {
+  line-height: 1;
+}
+
+/* TITLE  */
+
+.benefit h3 {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #355b5b;
+}
+
+/* DESCRIPTION  */
+.benefit p {
+  max-width: 145px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #718581;
+}
+
+/* DIVIDERS  */
+
+.divider {
+  width: 1px;
+  height: 150px;
+  flex-shrink: 0;
+  background: #dce3e1;
+}
+
+@media (max-width: 768px) {
+  .benefits {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .benefit {
+    width: 100%;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .section-top {
+    min-height: 580px;
+    height: 80vh;
+    background-position: center;
+  }
+
+  .section-top .content {
+    width: min(90%, 700px);
+    padding: 20px;
+  }
+
+  #experence-bhutan,
+  #Iconicattraction-bhutan {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 20px 28px;
+  }
+
+  #experence-bhutan .image-box {
+    width: calc(50% - 12px);
+  }
+
+  #Iconicattraction-bhutan .Iconicattraction-image-box {
+    width: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-top {
+    min-height: 450px;
+    height: 40vh;
+  }
+
+  .section-top .content {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .section-top .content small {
+    font-size: 16px;
+  }
+
+  .section-top .content strong {
+    font-size: clamp(27px, 7vw, 36px);
+  }
+
+  .section-top .content span {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .section-top .content small,
+  .section-top .content strong,
+  .section-top .content span {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
+  .karma-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 10px;
+  }
+
+  .karma-buttons button {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  #experencebhutan-text,
+  #Iconicattraction-text-box {
+    margin-top: 2.25rem;
+    padding: 0 16px;
+  }
+
+  #experence-text,
+  #Iconicattraction-text {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  #experence-bhutan,
+  #Iconicattraction-bhutan {
+    gap: 18px;
+    padding: 16px;
+  }
+
+  #experence-bhutan .image-box,
+  #Iconicattraction-bhutan .Iconicattraction-image-box {
+    width: 100%;
+  }
+
+  .experence-content,
+  .Iconicattraction-content {
+    padding: 20px;
+  }
+
+  .experence-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 12px;
+  }
+
+  .experence-content i {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .experence-content h3 {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .experence-content .experence-text-description {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Hero only: responsive layout and type */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .section-top {
+    height: 60vh;
+    min-height: 440px;
+    background-size: cover !important;
+  }
+
+  .section-top::before {
+    background: linear-gradient(90deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 28%));
+  }
+
+  .section-top .content {
+    width: min(88%, 680px);
+    padding: 28px;
+  }
+
+  .section-top .content strong {
+    font-size: clamp(36px, 6vw, 52px);
+  }
+
+  .section-top .content span {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-top {
+    height: 62svh;
+    min-height: 440px;
+    background-position: center;
+    background-size: cover !important;
+  }
+
+  .section-top::before {
+    background: linear-gradient(180deg, rgb(0 0 0 / 35%), rgb(0 0 0 / 58%));
+  }
+
+  .section-top .content {
+    width: min(92%, 430px);
+    padding: 22px 18px;
+    border: 1px solid rgb(255 255 255 / 24%);
+    border-radius: 18px;
+    background: rgb(16 42 42 / 52%);
+    backdrop-filter: blur(5px);
+  }
+
+  .section-top .content small {
+    padding: 4px 0 8px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .section-top .content strong {
+    padding: 2px 0;
+    font-size: clamp(29px, 8.5vw, 40px);
+    line-height: 1.12;
+  }
+
+  .section-top .content span {
+    padding: 10px 0 4px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .section-top .karma-buttons {
+    width: min(100%, 280px);
+    flex-direction: column;
+    gap: 10px;
+    margin: 16px 0 0;
+  }
+
+  .section-top .karma-buttons button {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-top {
+    animation: none;
+  }
+}
+
+/* Chatbot copied from the tour page */
+.chatbot-button {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1500;
+  width: 54px;
+  height: 54px;
+  padding: 2px;
+  overflow: hidden;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+  cursor: pointer;
+}
+
+.chatbot-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.chatbot-box {
+  position: fixed;
+  right: 22px;
+  bottom: 88px;
+  z-index: 1500;
+  display: none;
+  flex-direction: column;
+  width: 310px;
+  max-width: calc(100vw - 30px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 5px 22px rgb(0 0 0 / 20%);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: var(--footer-bg);
+  color: #fff;
+}
+
+.chat-header img {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  margin-right: 9px;
+  border-radius: 50%;
+  background: #fff;
+  object-fit: contain;
+}
+
+.chat-header span {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.chat-header button {
+  padding: 0 5px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  height: 260px;
+  padding: 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.bot-message,
+.user-message {
+  max-width: 85%;
+  margin: 0;
+  padding: 9px 11px;
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background: #edf3ef;
+  color: var(--ink);
+}
+
+.user-message {
+  align-self: flex-end;
+  background: var(--ink);
+  color: #fff;
+}
+
+.chat-input {
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.chat-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid #d6ddd8;
+  border-radius: 7px;
+  outline: none;
+  font-size: 11px;
+}
+
+.chat-input input:focus {
+  border-color: var(--ink);
+}
+
+.chat-input button {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 7px;
+  background: var(--ink);
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .chatbot-button {
+    right: 14px;
+    bottom: 14px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .chatbot-box {
+    right: 10px;
+    bottom: 72px;
+    max-width: calc(100vw - 20px);
+  }
+}
+
+/* Keep homepage hero typography aligned at every screen size. */
+.section-top .content small { color: #e5b69f !important; font-size: clamp(18px, 1.7vw, 22px) !important; text-shadow: 0 2px 5px rgb(0 0 0 / 80%); }
+.section-top .content strong { color: #fff !important; font-size: clamp(38px, 5.5vw, 68px) !important; }
+.section-top .content span { color: rgb(255 255 255 / 83%) !important; font-size: clamp(15px, 1.5vw, 17px) !important; }
+.section-top .content .home-hero-accent { color: #e6a087 !important; }

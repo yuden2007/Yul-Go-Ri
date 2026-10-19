@@ -1,0 +1,637 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --ink: #193b32;
+  --muted-ink: #52675f;
+  --paper: #fbfaf5;
+  --line: #e7e9df;
+  --accent: #d95e43;
+  --footer-bg: #102a2a;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+
+
+
+/* HERO IMAGE CAROUSEL */
+#carouselExampleDark {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  /* border-radius: 15px 15px 0 0; */
+  background-color: white;
+  /* border-radius: 12px; */
+  transition: 0.3s;
+}
+
+.carousel-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  display: block;
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+/* Dark overlay */
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  overflow: hidden;
+  inset: 0;
+  background: rgba(0, 45, 35, 0.1);
+  pointer-events: none;
+}
+
+/* Hero text */
+.carousel-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 86%;
+  max-width: 850px;
+  overflow: hidden;
+  color: white;
+}
+
+.carousel-hero-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.carousel-hero-text p {
+  font-size: 28px;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+
+/* Carousel indicators */
+.carousel-indicators {
+  z-index: 5;
+  overflow: hidden;
+}
+
+.carousel-indicators button {
+  height: 5px !important;
+  /* border-radius: 5px; */
+}
+
+/* Carousel arrows */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 4;
+  width: 7%;
+}
+
+/* search section */
+.search-section {
+  width: 100%;
+  padding: 25px;
+  background: #f7f9f7;
+  overflow: hidden;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 15px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.search-box select,
+.search-box button {
+  height: 45px;
+  border: none;
+  border-radius: 7px;
+  padding: 0 15px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.search-box select {
+  flex: 1;
+  min-width: 0;
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.search-box button,
+.hero-button {
+  background: #174d35;
+  color: white;
+  padding: 0 25px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.search-box button:hover,
+.hero-button:hover {
+  background: #0d3524;
+}
+
+/* Other slide buttons */
+.hero-button {
+  min-height: 45px;
+  border: none;
+  border-radius: 7px;
+}
+
+/* Search result message */
+#message {
+  text-align: center;
+  color: #666;
+  margin-top: 12px;
+}
+
+/* stay section */
+.stays-section {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 25px 25px 50px;
+  background: white;
+}
+
+.stays-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.stay-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+}
+
+/* Stay cards */
+.stay-card {
+  width: 340px;
+  max-width: 100%;
+  min-height: 395px;
+  background: white;
+  /* border-radius: 12px; */
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.stay-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.13);
+}
+
+.stay-card h3 {
+  padding: 0 16px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 21px;
+}
+
+.stay-card p {
+  padding: 0 16px;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* stay card image */
+.image-box {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+.stay-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.stay-card:hover .stay-image {
+  transform: scale(1.03);
+}
+
+/* Image left and right buttons */
+.image-box button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 35px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.image-box .left {
+  left: 8px;
+}
+
+.image-box .right {
+  right: 8px;
+}
+
+.image-box button:hover {
+  background: #174d35;
+}
+
+/* Image dots */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  z-index: 2;
+}
+
+.dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.dots span.active {
+  background: #087f8c;
+}
+
+/* stay button */
+.view-btn {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 8px;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(rgba(4, 54, 4, 0.95), rgba(5, 65, 5, 0.95));
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background: #0d3524;
+}
+
+
+
+/* Tablet screen */
+@media (max-width: 900px) {
+  .carousel-item img {
+    height: 450px;
+  }
+
+  .carousel-hero-text h1 {
+    font-size: 40px;
+  }
+
+  .search-box {
+    max-width: 750px;
+  }
+
+  .stay-container {
+    gap: 25px;
+  }
+
+  .stay-card {
+    width: 45%;
+  }
+}
+
+/* Mobile screen */
+@media (max-width: 600px) {
+  .carousel-item img {
+    height: 450px;
+  }
+
+  .carousel-hero-text {
+    left: 7%;
+    width: 86%;
+  }
+
+  .carousel-hero-text h1 {
+    font-size: 32px;
+  }
+
+  .carousel-hero-text p {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+
+  /* Search box stacks vertically */
+  .search-section {
+    padding: 20px 15px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .search-box select,
+  .search-box button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .stays-section {
+    padding: 25px 15px 35px;
+  }
+
+  .stays-section h2 {
+    font-size: 26px;
+  }
+
+  .stay-container {
+    gap: 25px;
+  }
+
+  .stay-card {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .image-box {
+    height: 230px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 9%;
+  }
+}
+
+@media (max-width: 350px) {
+  .carousel-item img {
+    height: 450px;
+  }
+
+  .carousel-hero-text h1 {
+    font-size: 27px;
+  }
+
+  .carousel-hero-text p {
+    font-size: 12px;
+  }
+
+  .stay-card h3 {
+    font-size: 19px;
+  }
+}
+
+/* Chatbot copied from the tour page */
+.chatbot-button {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1500;
+  width: 54px;
+  height: 54px;
+  padding: 2px;
+  overflow: hidden;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+  cursor: pointer;
+}
+
+.chatbot-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.chatbot-box {
+  position: fixed;
+  right: 22px;
+  bottom: 88px;
+  z-index: 1500;
+  display: none;
+  flex-direction: column;
+  width: 310px;
+  max-width: calc(100vw - 30px);
+  overflow: hidden;
+  border: 1px solid #e7e9df;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 5px 22px rgb(0 0 0 / 20%);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #102a2a;
+  color: #fff;
+}
+
+.chat-header img {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  margin-right: 9px;
+  border-radius: 50%;
+  background: #fff;
+  object-fit: contain;
+}
+
+.chat-header span {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.chat-header button {
+  padding: 0 5px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.chat-header .chat-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  height: 260px;
+  padding: 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.bot-message,
+.user-message {
+  max-width: 85%;
+  margin: 0;
+  padding: 9px 11px;
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background: #edf3ef;
+  color: #193b32;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: #193b32;
+  color: #fff;
+}
+
+.chat-input {
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.chat-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid #d6ddd8;
+  border-radius: 7px;
+  outline: none;
+  font-size: 11px;
+}
+
+.chat-input input:focus {
+  border-color: #193b32;
+}
+
+.chat-input button {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 7px;
+  background: #193b32;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .chatbot-button {
+    right: 14px;
+    bottom: 14px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .chatbot-box {
+    right: 10px;
+    bottom: 72px;
+    max-width: calc(100vw - 20px);
+  }
+}
+
+/* Homepage-matched hero height. */
+#carouselExampleDark,
+#carouselExampleDark .carousel-item {
+  height: 65vh;
+  min-height: 500px;
+}
+
+#carouselExampleDark .carousel-item img {
+  height: 100%;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #carouselExampleDark,
+  #carouselExampleDark .carousel-item {
+    height: 60vh;
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .site-header {
+    box-shadow: none;
+  }
+
+}
+
+@media (max-width: 575.98px) {
+  #carouselExampleDark,
+  #carouselExampleDark .carousel-item {
+    height: 62svh;
+    min-height: 440px;
+  }
+}
+
+/* Keep stay hero typography aligned at every screen size. */
+.carousel-hero-text h1 { color: #fff !important; font-size: clamp(38px, 5.5vw, 68px) !important; }
+.carousel-hero-text p { color: rgb(255 255 255 / 83%) !important; font-size: clamp(15px, 1.5vw, 17px) !important; }
+.carousel-hero-text .stay-hero-accent { color: #e6a087 !important; }
